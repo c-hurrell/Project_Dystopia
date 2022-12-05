@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
     // arm_parts << max 2 slots each arm? >>
     // chest_parts << max 3 slots? >>
     // head_parts << less sure on solid amount could have optics etc? >>
-    // leg_parts << 4 slots? >>
+    // leg_parts << 2 slots? >>
     // hand_parts << 2 slots for each hand? >>
     // power_core << single slot effects some kind of MP system? >> ~ Input needed from combat design
     // persona_core << determines specialty of enemy specific types based off of Jungian archetypes perhaps determining certain skill sets >>
