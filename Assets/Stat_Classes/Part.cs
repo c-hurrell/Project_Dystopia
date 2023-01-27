@@ -6,15 +6,20 @@ namespace Stat_Classes
 {
     public class Part : MonoBehaviour
     {
-        [SerializeField]
-        int part_id;
-        [SerializeField]
-        string part_name, part_type; // arm leg etc
+        [SerializeField] int _partId;
+        [SerializeField] string _partName, _partType; // arm leg etc
         
-        [SerializeField]
-        string stat_type, stat_bonus_type; // attack, defense etc
-        [SerializeField]
-        int stat_val, stat_bonus_val;
+        [SerializeField] StatType _statType, _statBonusType; // attack, defense etc
+        [SerializeField] int _statVal, _statBonusVal;
+
+        public enum StatType
+        {
+            Defence,
+            Attack,
+            Speed,
+            Hp,
+            Ep
+        }
 
         // Skills associatted with parts?
 

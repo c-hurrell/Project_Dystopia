@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     // Character Identifiers 
     Part part;
     public int id;
-    public string character_name;
+    public string characterName;
 
     // Character stats < - Will change in accordance to combat design ~ Waiting on input
 
