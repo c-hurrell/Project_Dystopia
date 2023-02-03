@@ -1,28 +1,27 @@
 using UnityEngine;
 
-public class EnemyBattle : MonoBehaviour
+namespace EventTriggers
 {
-    [SerializeField] private Collider2D _trigger;
-
-    private SceneHandler _sceneHandler;
-
-    private void Start()
+    public class EnemyBattle : MonoBehaviour
     {
-        _sceneHandler = FindObjectOfType<SceneHandler>();
+        [SerializeField] private Collider2D _trigger;
 
-        if (_trigger == null)
+        private void Start()
         {
-            Debug.LogError("Enemy battle trigger is null, assign trigger in editor");
+            if (_trigger == null)
+            {
+                Debug.LogError("Enemy battle trigger is null, assign trigger in editor");
+            }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Player entered battle trigger");
-            _sceneHandler.EnemyBattleStart(Background.Test, new TestTransition());
-            Destroy(this);
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Player entered battle trigger");
+                _globalSceneHandler.EnemyBattleStart(Background.Test, new TestTransition());
+                Destroy(this);
+            }
         }
     }
 }

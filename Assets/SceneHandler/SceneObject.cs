@@ -14,7 +14,9 @@ namespace SceneHandler
         /// <summary>
         /// Ran when a scene is paused
         /// </summary>
-        public abstract void Pause();
+        public virtual void Pause()
+        {
+        }
 
         /// <summary>
         /// Ran when scene is resumed
