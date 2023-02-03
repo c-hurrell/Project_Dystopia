@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/Enemy battle trigger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventTriggers/Enemy battle trigger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameEntities/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameEntities/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +20,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/da/399f726c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameEntities/WorldObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Party_Mechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TransitionEffects/TestTransition.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,7 +105,7 @@
       <workItem from="1670256750578" duration="750000" />
       <workItem from="1670257763657" duration="2315000" />
       <workItem from="1674836916810" duration="1112000" />
-      <workItem from="1675432635678" duration="1276000" />
+      <workItem from="1675432635678" duration="7294000" />
     </task>
     <servers />
   </component>
