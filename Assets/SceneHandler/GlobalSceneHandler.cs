@@ -49,6 +49,12 @@ namespace SceneHandler
             var sceneInstance = NewScene(scene);
             sceneInstance.TempUnload();
         }
+        
+        public static void ResumeScene(Scene scene)
+        {
+            var sceneInstance = NewScene(scene);
+            sceneInstance.Resume();
+        }
 
         private static SceneBase NewScene(Scene scene)
         {
