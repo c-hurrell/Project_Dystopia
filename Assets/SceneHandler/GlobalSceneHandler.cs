@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Scenes.SceneTypes;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace SceneHandler
 {
@@ -10,6 +9,7 @@ namespace SceneHandler
     {
         /// <summary>
         /// List of all loaded scenes
+        /// Used for unloading a scene safely
         /// </summary>
         private static readonly List<SceneBase> LoadedScenes = new();
 
@@ -20,22 +20,26 @@ namespace SceneHandler
             if (overwrite)
             {
                 LoadedScenes.Clear();
-                LoadedScenes.Add(sceneInstance);
-                return SceneManager.LoadSceneAsync(sceneInstance.SceneName);
             }
 
             LoadedScenes.Add(sceneInstance);
 
-            return SceneManager.LoadSceneAsync(sceneInstance.SceneName, LoadSceneMode.Additive);
+            return sceneInstance.LoadAsync(overwrite);
         }
 
         public static void UnloadScene(Scene scene)
         {
             var sceneInstance = NewScene(scene);
 
-            LoadedScenes.RemoveAll(x => x.SceneName == sceneInstance.SceneName);
+            var loadedScene = LoadedScenes.Find(x => x.SceneName == sceneInstance.SceneName);
+            if (loadedScene == null)
+            {
+                Debug.LogError($"Scene {sceneInstance.SceneName} is not loaded");
+                return;
+            }
 
-            SceneManager.UnloadSceneAsync(sceneInstance.SceneName);
+            loadedScene.UnloadAsync();
+            LoadedScenes.Remove(loadedScene);
         }
 
         public static void PauseScene(Scene scene)
@@ -49,7 +53,7 @@ namespace SceneHandler
             var sceneInstance = NewScene(scene);
             sceneInstance.TempUnload();
         }
-        
+
         public static void ResumeScene(Scene scene)
         {
             var sceneInstance = NewScene(scene);
@@ -58,17 +62,10 @@ namespace SceneHandler
 
         private static SceneBase NewScene(Scene scene)
         {
-            var sceneType = SceneType(scene);
-
-            return (SceneBase)Activator.CreateInstance(sceneType);
-        }
-
-        private static Type SceneType(Scene scene)
-        {
             return scene switch
             {
-                Scene.TestWorld => typeof(TestWorldScene),
-                Scene.EnemyBattle => typeof(EnemyBattleScene),
+                Scene.TestWorld => new TestWorldScene(),
+                Scene.EnemyBattle => new EnemyBattleScene(),
                 _ => throw new NotImplementedException()
             };
         }
