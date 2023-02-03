@@ -71,4 +71,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae67a6cebbb5df0a09a2581a16ac9ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trigger: {fileID: 7797764978236919483}
+  trigger: {fileID: 7797764978236919483}

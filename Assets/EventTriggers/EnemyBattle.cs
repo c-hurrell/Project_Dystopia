@@ -1,14 +1,15 @@
+using SceneHandler;
 using UnityEngine;
 
 namespace EventTriggers
 {
     public class EnemyBattle : MonoBehaviour
     {
-        [SerializeField] private Collider2D _trigger;
+        [SerializeField] private Collider2D trigger;
 
         private void Start()
         {
-            if (_trigger == null)
+            if (trigger == null)
             {
                 Debug.LogError("Enemy battle trigger is null, assign trigger in editor");
             }
@@ -19,7 +20,7 @@ namespace EventTriggers
             if (other.CompareTag("Player"))
             {
                 Debug.Log("Player entered battle trigger");
-                _globalSceneHandler.EnemyBattleStart(Background.Test, new TestTransition());
+                GlobalSceneHandler.LoadScene(Scene.EnemyBattle, false);
                 Destroy(this);
             }
         }

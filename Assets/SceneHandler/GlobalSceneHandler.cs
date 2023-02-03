@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Scenes.SceneTypes;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace SceneHandler
 {
@@ -12,6 +13,21 @@ namespace SceneHandler
         /// Used for unloading a scene safely
         /// </summary>
         private static readonly List<ISceneBase> LoadedScenes = new();
+
+        private static readonly GameObject[] SceneObjects;
+
+        static GlobalSceneHandler()
+        {
+            var allScenes = Enum.GetValues(typeof(Scene));
+            SceneObjects = new GameObject[allScenes.Length];
+
+            for (var i = 0; i < allScenes.Length; i++)
+            {
+                var scene = (Scene)allScenes.GetValue(i);
+                var component = SceneType(scene);
+                SceneObjects[i] = NewObjectWithComponent(component);
+            }
+        }
 
         public static void LoadScene(Scene scene, bool overwrite = true)
         {
@@ -42,33 +58,49 @@ namespace SceneHandler
             LoadedScenes.Remove(loadedScene);
         }
 
-        public static void PauseScene(Scene scene)
+        public static void PauseAllScenes()
         {
-            var sceneType = SceneType(scene);
-
-            var loadedScene = LoadedScenes.Find(x => x.GetType() == sceneType);
-            if (loadedScene == null)
+            foreach (var loadedScene in LoadedScenes)
             {
-                Debug.LogError("Scene you're trying to pause is not loaded");
-                return;
+                loadedScene.Pause();
             }
-
-            loadedScene.Pause();
         }
 
-        public static void TempUnloadScene(Scene scene)
+        // public static void PauseScene(Scene scene)
+        // {
+        //     var sceneType = SceneType(scene);
+        //
+        //     var loadedScene = LoadedScenes.Find(x => x.GetType() == sceneType);
+        //     if (loadedScene == null)
+        //     {
+        //         Debug.LogError("Scene you're trying to pause is not loaded");
+        //         return;
+        //     }
+        //
+        //     loadedScene.Pause();
+        // }
+
+        public static void TempUnloadAllScenes()
         {
-            var sceneType = SceneType(scene);
-
-            var loadedScene = LoadedScenes.Find(x => x.GetType() == sceneType);
-            if (loadedScene == null)
+            foreach (var loadedScene in LoadedScenes)
             {
-                Debug.LogError("Scene you're trying to temp unload is not loaded");
-                return;
+                loadedScene.TempUnload();
             }
-
-            loadedScene.TempUnload();
         }
+
+        // public static void TempUnloadScene(Scene scene)
+        // {
+        //     var sceneType = SceneType(scene);
+        //
+        //     var loadedScene = LoadedScenes.Find(x => x.GetType() == sceneType);
+        //     if (loadedScene == null)
+        //     {
+        //         Debug.LogError("Scene you're trying to temp unload is not loaded");
+        //         return;
+        //     }
+        //
+        //     loadedScene.TempUnload();
+        // }
 
         public static void ResumeScene(Scene scene)
         {
@@ -84,10 +116,17 @@ namespace SceneHandler
             loadedScene.Resume();
         }
 
+
+        private static GameObject NewObjectWithComponent(Type component)
+        {
+            var obj = new GameObject();
+            obj.AddComponent(component);
+            return obj;
+        }
+
         private static ISceneBase NewScene(Scene scene)
         {
-            var sceneType = SceneType(scene);
-            return (ISceneBase)Activator.CreateInstance(sceneType);
+            return Object.Instantiate(SceneObjects[(int)scene]).GetComponent<ISceneBase>();
         }
 
         private static Type SceneType(Scene scene)

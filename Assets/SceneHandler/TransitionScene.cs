@@ -18,9 +18,8 @@ namespace SceneHandler
         private Coroutine _loadTransitionEffect;
         private AsyncOperation _loadOperation;
 
-        protected TransitionScene()
+        private void Start()
         {
-            Instantiate(this);
             DontDestroyOnLoad(this);
         }
 
@@ -42,12 +41,15 @@ namespace SceneHandler
 
         public override AsyncOperation LoadAsync(bool overwrite = true)
         {
+            _loadOperation = base.LoadAsync(overwrite);
+            _loadOperation.allowSceneActivation = false;
             Transition(LoadTransition);
-            return null;
+            return _loadOperation;
         }
 
         public override AsyncOperation UnloadAsync()
         {
+            base.UnloadAsync();
             Transition(UnloadTransition);
             return null;
         }
@@ -69,9 +71,10 @@ namespace SceneHandler
             _loadTransition = StartCoroutine(SceneTransition(transition));
         }
 
-        private static IEnumerator SceneTransition(ISceneTransition transition)
+        private IEnumerator SceneTransition(ISceneTransition transition)
         {
             yield return new WaitUntil(() => transition.IsDone);
+            _loadOperation.allowSceneActivation = true;
         }
     }
 
