@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="" />
+    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/ISceneBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/ISceneBase.cs.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/b9/15936dca/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/da/399f726c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,7 +105,7 @@
       <workItem from="1670257763657" duration="2315000" />
       <workItem from="1674836916810" duration="1112000" />
       <workItem from="1675432635678" duration="10437000" />
-      <workItem from="1675448244145" duration="2434000" />
+      <workItem from="1675448244145" duration="2762000" />
     </task>
     <servers />
   </component>

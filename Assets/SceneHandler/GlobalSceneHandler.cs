@@ -11,7 +11,7 @@ namespace SceneHandler
         /// List of all loaded scenes
         /// Used for unloading a scene safely
         /// </summary>
-        private static readonly List<SceneBase> LoadedScenes = new();
+        private static readonly List<ISceneBase> LoadedScenes = new();
 
         public static void LoadScene(Scene scene, bool overwrite = true)
         {
@@ -60,7 +60,7 @@ namespace SceneHandler
             sceneInstance.Resume();
         }
 
-        private static SceneBase NewScene(Scene scene)
+        private static ISceneBase NewScene(Scene scene)
         {
             return scene switch
             {

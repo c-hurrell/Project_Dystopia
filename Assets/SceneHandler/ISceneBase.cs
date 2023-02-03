@@ -3,22 +3,24 @@ using UnityEngine.SceneManagement;
 
 namespace SceneHandler
 {
-    public abstract class SceneBase
+    public interface ISceneBase
     {
-        public abstract string SceneName { get; }
-        public abstract void Pause();
-        public abstract void Resume();
-        public abstract void TempUnload();
-        public abstract void LoadAsync(bool overwrite = true);
-        public abstract void UnloadAsync();
+        public string SceneName { get; }
+        public void Pause();
+        public void Resume();
+        public void TempUnload();
+        public void LoadAsync(bool overwrite = true);
+        public void UnloadAsync();
     }
 
     /// <summary>
     /// Base class for a possible scene
     /// </summary>
-    public abstract class SceneBase<TPauseType> : SceneBase where TPauseType : SceneObject
+    public abstract class SceneBase<TPauseType> : ISceneBase where TPauseType : SceneObject
     {
-        public override void Pause()
+        public abstract string SceneName { get; }
+
+        public void Pause()
         {
             var pauseObjects = Object.FindObjectsOfType<TPauseType>();
 
@@ -28,7 +30,7 @@ namespace SceneHandler
             }
         }
 
-        public override void Resume()
+        public void Resume()
         {
             var pauseObjects = Object.FindObjectsOfType<TPauseType>();
 
@@ -38,7 +40,7 @@ namespace SceneHandler
             }
         }
 
-        public override void TempUnload()
+        public void TempUnload()
         {
             var pauseObjects = Object.FindObjectsOfType<TPauseType>();
 
@@ -48,12 +50,12 @@ namespace SceneHandler
             }
         }
 
-        public override void LoadAsync(bool overwrite = true)
+        public void LoadAsync(bool overwrite = true)
         {
             SceneManager.LoadSceneAsync(SceneName, overwrite ? LoadSceneMode.Single : LoadSceneMode.Additive);
         }
 
-        public override void UnloadAsync()
+        public void UnloadAsync()
         {
             SceneManager.UnloadSceneAsync(SceneName);
         }
