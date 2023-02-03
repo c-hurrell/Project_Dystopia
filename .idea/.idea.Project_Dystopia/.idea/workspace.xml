@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs" afterDir="false" />
-    </list>
+    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +100,7 @@
       <workItem from="1670257763657" duration="2315000" />
       <workItem from="1674836916810" duration="1112000" />
       <workItem from="1675432635678" duration="10437000" />
-      <workItem from="1675448244145" duration="2128000" />
+      <workItem from="1675448244145" duration="2434000" />
     </task>
     <servers />
   </component>

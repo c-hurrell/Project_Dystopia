@@ -13,7 +13,7 @@ namespace SceneHandler
         /// </summary>
         private static readonly List<SceneBase> LoadedScenes = new();
 
-        public static AsyncOperation LoadScene(Scene scene, bool overwrite = true)
+        public static void LoadScene(Scene scene, bool overwrite = true)
         {
             var sceneInstance = NewScene(scene);
 
@@ -24,7 +24,7 @@ namespace SceneHandler
 
             LoadedScenes.Add(sceneInstance);
 
-            return sceneInstance.LoadAsync(overwrite);
+            sceneInstance.LoadAsync(overwrite);
         }
 
         public static void UnloadScene(Scene scene)

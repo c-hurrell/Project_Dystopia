@@ -9,7 +9,7 @@ namespace SceneHandler
         public abstract void Pause();
         public abstract void Resume();
         public abstract void TempUnload();
-        public abstract AsyncOperation LoadAsync(bool overwrite = true);
+        public abstract void LoadAsync(bool overwrite = true);
         public abstract void UnloadAsync();
     }
 
@@ -48,9 +48,9 @@ namespace SceneHandler
             }
         }
 
-        public override AsyncOperation LoadAsync(bool overwrite = true)
+        public override void LoadAsync(bool overwrite = true)
         {
-            return SceneManager.LoadSceneAsync(SceneName, overwrite ? LoadSceneMode.Single : LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(SceneName, overwrite ? LoadSceneMode.Single : LoadSceneMode.Additive);
         }
 
         public override void UnloadAsync()
