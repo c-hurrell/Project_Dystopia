@@ -9,20 +9,20 @@ namespace SceneHandler
         public void Pause();
         public void Resume();
         public void TempUnload();
-        public void LoadAsync(bool overwrite = true);
-        public void UnloadAsync();
+        public AsyncOperation LoadAsync(bool overwrite = true);
+        public AsyncOperation UnloadAsync();
     }
 
     /// <summary>
     /// Base class for a possible scene
     /// </summary>
-    public abstract class SceneBase<TPauseType> : ISceneBase where TPauseType : SceneObject
+    public abstract class SceneBase<TPauseType> : MonoBehaviour, ISceneBase where TPauseType : SceneObject
     {
         public abstract string SceneName { get; }
 
-        public void Pause()
+        public virtual void Pause()
         {
-            var pauseObjects = Object.FindObjectsOfType<TPauseType>();
+            var pauseObjects = FindObjectsOfType<TPauseType>();
 
             foreach (var pauseObject in pauseObjects)
             {
@@ -30,9 +30,9 @@ namespace SceneHandler
             }
         }
 
-        public void Resume()
+        public virtual void Resume()
         {
-            var pauseObjects = Object.FindObjectsOfType<TPauseType>();
+            var pauseObjects = FindObjectsOfType<TPauseType>();
 
             foreach (var pauseObject in pauseObjects)
             {
@@ -40,9 +40,9 @@ namespace SceneHandler
             }
         }
 
-        public void TempUnload()
+        public virtual void TempUnload()
         {
-            var pauseObjects = Object.FindObjectsOfType<TPauseType>();
+            var pauseObjects = FindObjectsOfType<TPauseType>();
 
             foreach (var pauseObject in pauseObjects)
             {
@@ -50,14 +50,14 @@ namespace SceneHandler
             }
         }
 
-        public void LoadAsync(bool overwrite = true)
+        public virtual AsyncOperation LoadAsync(bool overwrite = true)
         {
-            SceneManager.LoadSceneAsync(SceneName, overwrite ? LoadSceneMode.Single : LoadSceneMode.Additive);
+            return SceneManager.LoadSceneAsync(SceneName, overwrite ? LoadSceneMode.Single : LoadSceneMode.Additive);
         }
 
-        public void UnloadAsync()
+        public virtual AsyncOperation UnloadAsync()
         {
-            SceneManager.UnloadSceneAsync(SceneName);
+            return SceneManager.UnloadSceneAsync(SceneName);
         }
     }
 }
