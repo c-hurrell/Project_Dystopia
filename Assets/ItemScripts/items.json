@@ -8,22 +8,18 @@
 
     "partType": "Head",
     "_statType": "EP",
-    "_statBaseVal": 10,
-    //"_statBonusType": "EP", Randomise bonus values?
-    //"_statBonusVal": 0
+    "_statBaseVal": 10
   },
   {
     "itemID": 2,
-    "itemName": "Tinker Arm",
+    "itemName": "Tinker Arms",
     "itemType": "Part",
-    "itemDescription": "An arm fit for a tinkerer",
+    "itemDescription": "Arms fit for a tinkerer",
     "itemImage": "tinkerarm.png",
 
     "partType": "Arm",
     "_statType": "Attack",
-    "_statBaseVal": 10,
-    //"_statBonusType": "HP", Randomise the bonus values?
-    //"_statBonusVal": 0
+    "_statBaseVal": 10
   },
   "..."
 ]
