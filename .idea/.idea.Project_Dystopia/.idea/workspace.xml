@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Item.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Part.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Part.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/ItemScripts/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Party_Mechanics.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -78,6 +84,10 @@
       <workItem from="1670257763657" duration="2315000" />
       <workItem from="1674836704724" duration="4931000" />
       <workItem from="1675434152851" duration="3584000" />
+      <workItem from="1676639428334" duration="644000" />
+      <workItem from="1677185410693" duration="916000" />
+      <workItem from="1677186360971" duration="62000" />
+      <workItem from="1677186499884" duration="1793000" />
     </task>
     <servers />
   </component>

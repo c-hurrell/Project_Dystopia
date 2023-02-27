@@ -1,0 +1,29 @@
+[
+  {
+    "itemID": 1,
+    "itemName": "Tinker Head",
+    "itemType" : "Part",
+    "itemDescription": "A head useful for a tinkerer",
+    "itemImage": "tinkerhead.png",
+
+    "partType": "Head",
+    "_statType": "EP",
+    "_statBaseVal": 10,
+    //"_statBonusType": "EP", Randomise bonus values?
+    //"_statBonusVal": 0
+  },
+  {
+    "itemID": 2,
+    "itemName": "Tinker Arm",
+    "itemType": "Part",
+    "itemDescription": "An arm fit for a tinkerer",
+    "itemImage": "tinkerarm.png",
+
+    "partType": "Arm",
+    "_statType": "Attack",
+    "_statBaseVal": 10,
+    //"_statBonusType": "HP", Randomise the bonus values?
+    //"_statBonusVal": 0
+  },
+  "..."
+]

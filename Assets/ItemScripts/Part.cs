@@ -7,12 +7,16 @@ namespace Stat_Classes
     public class Part : Item
     {
         //[SerializeField] int _partId;
-        [SerializeField] string _partName, _partType; // arm leg etc
-        
+        [Header("Part Information")]
+        [SerializeField] string partName, partType; // arm leg etc
+        [Space]
+        [Header("Part Level")]
+        [SerializeField] private int partLvl;
+        [Space]
+        [Header("Part Stats")]
         [SerializeField] public StatType _statType, _statBonusType; // attack, defense etc
         [SerializeField] public int _statVal,_statBaseVal, _statBonusVal, _statBonusBaseVal;
-
-        [SerializeField] private int partLvl;
+        
         
         // [SerializeField] _partSkill
 
