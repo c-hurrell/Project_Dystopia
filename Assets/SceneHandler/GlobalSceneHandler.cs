@@ -10,6 +10,8 @@ namespace SceneHandler
     {
         private static GlobalSceneHandler _instance;
 
+        private AsyncOperation _loadingScene;
+
         private void Awake()
         {
             if (_instance != null) return;
@@ -20,6 +22,11 @@ namespace SceneHandler
 
         public static void LoadScene(Scene scene)
         {
+            _instance.LoadSceneInternal(scene);
+        }
+
+        private void LoadSceneInternal(Scene scene)
+        {
             // scuffed but this is fine for now
             SceneBase loader = scene switch
             {
@@ -28,13 +35,15 @@ namespace SceneHandler
                 _ => throw new ArgumentOutOfRangeException(nameof(scene), scene, null)
             };
 
-            _instance.StartCoroutine(LoadSceneBg(loader));
+            _loadingScene = SceneManager.LoadSceneAsync(loader.SceneName);
+            _loadingScene.allowSceneActivation = false;
+            StartCoroutine(LoadSceneBg(loader));
         }
 
-        private static IEnumerator LoadSceneBg(SceneBase scene)
+        private IEnumerator LoadSceneBg(SceneBase scene)
         {
             yield return scene.Load();
-            SceneManager.LoadScene(scene.SceneName);
+            _loadingScene.allowSceneActivation = true;
         }
     }
 
