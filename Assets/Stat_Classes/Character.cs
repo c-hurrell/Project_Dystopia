@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
 
     // PARTS SECTION POST PARTS CLASS CREATION
     [Header("Character Parts")]
-    public Part[] armParts; //<< max 2 slots each arm? >>
+    public Part armsPart; //<< max 2 slots each arm? >>
     public Part chestPart; //<< max 3 slots? >>
     public Part headPart; //<< less sure on solid amount could have optics etc? >>
     public Part legsPart;
@@ -38,10 +38,7 @@ public class Character : MonoBehaviour
     // Calculates the totals for each part
     public void StatTotals()
     {
-        foreach (var armPart in armParts)
-        {
-            PartStatCalc(armPart);
-        }
+        PartStatCalc(armsPart); 
         PartStatCalc(chestPart);
         PartStatCalc(headPart);
         PartStatCalc(legsPart);
