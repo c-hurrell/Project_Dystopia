@@ -20,7 +20,7 @@ namespace EventTriggers
             if (other.CompareTag("Player"))
             {
                 Debug.Log("Player entered battle trigger");
-                GlobalSceneHandler.LoadScene(Scene.EnemyBattle, false);
+                GlobalSceneHandler.LoadScene(Scene.EnemyBattle);
                 Destroy(this);
             }
         }

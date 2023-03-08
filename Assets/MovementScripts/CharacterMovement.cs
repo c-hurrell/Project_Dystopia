@@ -1,10 +1,8 @@
-using Scenes;
-using Scenes.WorldObjectTypes;
 using UnityEngine;
 
 namespace MovementScripts
 {
-    public class CharacterMovement : TestWorldObject
+    public class CharacterMovement : MonoBehaviour
     {
         private Vector2 _inputDirection;
         private Rigidbody2D _rigidbody;
@@ -33,15 +31,11 @@ namespace MovementScripts
 
         private void Update()
         {
-            if (IsPaused)
-                return;
             ProcessInput();
         }
 
         private void FixedUpdate()
         {
-            if (IsPaused)
-                return;
             Move();
         }
     }

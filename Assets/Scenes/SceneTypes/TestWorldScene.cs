@@ -1,9 +1,8 @@
 using SceneHandler;
-using Scenes.WorldObjectTypes;
 
 namespace Scenes.SceneTypes
 {
-    public class TestWorldScene : SceneBase<TestWorldObject>
+    public class TestWorldScene : SceneBase
     {
         public override string SceneName => "TestWorldScene";
     }

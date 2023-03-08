@@ -6,15 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/Enemy battle trigger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventTriggers/Enemy battle trigger.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/TransitionScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/TransitionScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/TransitionScene.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/TransitionScene.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTypes/EnemyBattleScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneTypes/EnemyBattleScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TransitionEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TransitionEffects/TestTransition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TransitionEffects/TestTransition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTypes/TestWorldScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneTypes/TestWorldScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldObjectTypes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldObjectTypes/EnemyBattleSceneObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldObjectTypes/EnemyBattleSceneObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldObjectTypes/TestWorldObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldObjectTypes/TestWorldObject.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +29,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/28/c0ccd9c8/Coroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/56/279de7b8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/b9/15936dca/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/da/399f726c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,7 +120,8 @@
       <workItem from="1670257763657" duration="2315000" />
       <workItem from="1674836916810" duration="1112000" />
       <workItem from="1675432635678" duration="10437000" />
-      <workItem from="1675448244145" duration="10204000" />
+      <workItem from="1675448244145" duration="10278000" />
+      <workItem from="1678294999768" duration="2171000" />
     </task>
     <servers />
   </component>
