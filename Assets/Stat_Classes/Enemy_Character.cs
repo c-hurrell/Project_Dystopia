@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Stat_Classes;
 
-namespace Stat_Classes
-{
-    public class Enemy_Character : Character
+
+
+    public class Enemy_Character : Character    //maybe should be a virtual class for specific enemy types to inherit from
     {
         List<item> dropList;
         item selectdrop()
@@ -15,4 +15,4 @@ namespace Stat_Classes
 
         }
     }
-}
+
