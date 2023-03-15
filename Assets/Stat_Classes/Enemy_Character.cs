@@ -10,7 +10,7 @@ using Stat_Classes;
     /*    List<item> dropList;
         item selectdrop()
         {
-            int selector = Random.Range(0,dropList.length);
+            int selector = Random.Range(0,dropList.Count);
             return dropList[selector];
 
         }*/
@@ -22,6 +22,10 @@ using Stat_Classes;
           partDrops.Add(legsPart);
           partDrops.Add(personaCore);
           partDrops.Add(powerCore);
+
+          int partIndex = Random.Range(0,partDrops.Count);
+
+          Part droppedPart = partDrops[partIndex];
          
 
         }
