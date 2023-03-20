@@ -18,7 +18,7 @@ namespace Stat_Classes
         [SerializeField] public int _statVal,_statBaseVal, _statBonusVal, _statBonusBaseVal;
         
         
-        // [SerializeField] _partSkill
+        [SerializeField] public skill _partSkill;
 
         public enum StatType
         {
