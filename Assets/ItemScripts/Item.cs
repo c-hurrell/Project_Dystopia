@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item
+public class Item : ScriptableObject
 {
     public int itemID;
     public string itemType;
@@ -14,15 +14,5 @@ public class Item
     {
         // Implement the use of the item here
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
