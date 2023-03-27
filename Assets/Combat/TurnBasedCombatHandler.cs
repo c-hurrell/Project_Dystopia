@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Enemy;
 using UnityEngine;
 using World;
@@ -13,6 +14,9 @@ namespace Combat
 
         [SerializeField] private GameObject[] enemyPrefabs;
         [SerializeField] private GameObject[] playerPrefabs;
+
+        private readonly List<EnemyBattleStatus> _enemyStatuses = new();
+        private readonly List<PlayerBattleStatus> _playerStatuses = new();
 
         private void Start()
         {
@@ -33,6 +37,8 @@ namespace Combat
                 var player = Instantiate(playerPrefabs[(int)partyMember.MemberType]);
                 var status = player.AddComponent<PlayerBattleStatus>();
                 status.health = partyMember.Health;
+                
+                _playerStatuses.Add(status);
             }
 
             var currentEncounter = CombatManager.CurrentEncounter;
@@ -42,6 +48,8 @@ namespace Combat
                 var enemy = Instantiate(enemyPrefabs[(int)currentEncounter.enemyType]);
                 var status = enemy.AddComponent<EnemyBattleStatus>();
                 status.health = Random.Range(currentEncounter.minHealth, currentEncounter.maxHealth + 1);
+                
+                _enemyStatuses.Add(status);
             }
         }
 
@@ -50,6 +58,7 @@ namespace Combat
         /// </summary>
         public void PlayerAct(PlayerAction action)
         {
+            action.Execute(_enemyStatuses, _playerStatuses);
         }
     }
 }
