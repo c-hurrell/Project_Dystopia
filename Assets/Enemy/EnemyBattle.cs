@@ -1,11 +1,13 @@
-using SceneHandler;
+using Combat;
 using UnityEngine;
 
-namespace EventTriggers
+namespace Enemy
 {
+    [RequireComponent(typeof(Collider2D))]
     public class EnemyBattle : MonoBehaviour
     {
         [SerializeField] private Collider2D trigger;
+        [SerializeField] private EncounterData enemyInfo;
 
         private void Start()
         {
@@ -20,7 +22,7 @@ namespace EventTriggers
             if (other.CompareTag("Player"))
             {
                 Debug.Log("Player entered battle trigger");
-                GlobalSceneHandler.LoadScene(Scene.EnemyBattle);
+                CombatManager.StartCombat(enemyInfo);
                 Destroy(this);
             }
         }
