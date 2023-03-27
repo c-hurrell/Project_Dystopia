@@ -5,7 +5,9 @@ using Stat_Classes;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] 
+    [Header("Put Player Object Here")]
+    [SerializeField] private GameObject player;
+    [Header("Updated during gameplay")] 
     [SerializeField] private Player_Character playerChar;
 
     public List<Item> Items;
@@ -15,7 +17,8 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindWithTag("Player");
+        //GameObject.FindWithTag("Player");
+        playerChar = player.GetComponent<Player_Character>();
     }
     
     // Functions for Adding and Removing items
@@ -66,7 +69,6 @@ public class Inventory : MonoBehaviour
                 RemovePart(part);
                 AddPart(playerChar.chestPart);
                 playerChar.ChangePart(part);
-                
                 break;
             case Part.PartType.Legs:
                 RemovePart(part);
