@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
 
     // Character stats < - Will change in accordance to combat design ~ Waiting on input
     [Header("Character Stats")]
-    public int hitpoints, energypoints, attack, defence, speed; 
+    public double hitpoints, energypoints, attack, defence, speed; 
     // #Notes for the player these will be calculated but for enemies these will be hand made potentially - or would be decided for bosses only etc.
 
     public List<skill> currentSkills;
@@ -25,13 +25,13 @@ public class Character : MonoBehaviour
 
     // PARTS SECTION POST PARTS CLASS CREATION
     [Header("Character Parts")]
-    public Part armsPart; //<< max 2 slots each arm? >>
-    public Part chestPart; //<< max 3 slots? >>
-    public Part headPart; //<< less sure on solid amount could have optics etc? >>
+    public Part armsPart; 
+    public Part chestPart;
+    public Part headPart; 
     public Part legsPart;
     public Part powerCore; //<< single slot effects some kind of MP system? >> ~ Input needed from combat design
-    public Part personaCore; //<< determines specialty of enemy specific types based off of Jungian archetypes perhaps determining certain skill sets >>
-    //#further note have early ideas for the concept e.g. certain party members will only be compatable with certain persona cores with some freedom for player choice
+    //public Part personaCore; //<< determines specialty of enemy specific types based off of Jungian archetypes perhaps determining certain skill sets >> removing for now
+
 
     // Add in Unity Event trigger? So when parts on a character are changed an event is raised?
     
@@ -43,7 +43,7 @@ public class Character : MonoBehaviour
         PartStatCalc(headPart);
         PartStatCalc(legsPart);
         PartStatCalc(powerCore);
-        PartStatCalc(personaCore);
+        //PartStatCalc(personaCore);
     }
     // Used in to calculate the stat addition of a part
     private void PartStatCalc(Part part)
@@ -77,9 +77,39 @@ public class Character : MonoBehaviour
         currentSkills.Add(chestPart._partSkill);
         currentSkills.Add(legsPart._partSkill);
         currentSkills.Add(powerCore._partSkill);
-        currentSkills.Add(personaCore._partSkill);
     }
     
     
+    public void ChangePart(Part part)
+    {
+        switch (part.partType)
+        {
+            case Part.PartType.Head:
+                headPart = part;
+                StatTotals();
+                break;
+            case Part.PartType.Arms:
+                armsPart = part;
+                StatTotals();
+                break;
+            case Part.PartType.Chest:
+                chestPart = part;
+                StatTotals();
+                break;
+            case Part.PartType.PowerCore:
+                powerCore = part;
+                StatTotals();
+                break;
+            case Part.PartType.Legs:
+                legsPart = part;
+                StatTotals();
+                break;
+            default:
+                Debug.Log(" > Error: Part doesn't have a type");
+                break;
+        }
+    }
+
+
 
 }

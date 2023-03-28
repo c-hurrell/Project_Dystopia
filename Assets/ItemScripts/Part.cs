@@ -8,18 +8,25 @@ namespace Stat_Classes
     {
         //[SerializeField] int _partId;
         [Header("Part Information")]
-        [SerializeField] string partName, partType; // arm leg etc
+        [SerializeField] private string _partName;
+        [SerializeField] public PartType partType;
         [Space]
         [Header("Part Level")]
-        [SerializeField] private int partLvl;
-        [Space]
-        [Header("Part Stats")]
-        [SerializeField] public StatType _statType, _statBonusType; // attack, defense etc
-        [SerializeField] public int _statVal,_statBaseVal, _statBonusVal, _statBonusBaseVal;
+        [SerializeField] private int _partLvl;
+
+        [Space] [Header("Part Stats")] 
+        [SerializeField] public StatType _statType; // _statBonusType; // attack, defense etc
+
+        [SerializeField] public double _statVal, _statBaseVal; //, _statBonusVal, _statBonusBaseVal;
         
         
         [SerializeField] public skill _partSkill;
 
+        // [SerializeField] _partSkill
+        private void Awake()
+        {
+            CalculateStatValue();
+        }
         public enum StatType
         {
             Defence,
@@ -28,19 +35,19 @@ namespace Stat_Classes
             Hp,
             Ep
         }
-
-        private void Awake()
+        public enum PartType
         {
-            if (partLvl < 4)
-            {
-                
-            }
+            Head,
+            Arms,
+            PowerCore,
+            Chest,
+            Legs
         }
         
 
-        // Skills associatted with parts?
-
-        
-        
+        private void CalculateStatValue()
+        {
+            _statVal = _statBaseVal + _statBaseVal * (_partLvl * 0.1);
+        }
     }
 }
