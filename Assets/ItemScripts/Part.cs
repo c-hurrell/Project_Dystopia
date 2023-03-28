@@ -20,6 +20,8 @@ namespace Stat_Classes
         [SerializeField] public double _statVal, _statBaseVal; //, _statBonusVal, _statBonusBaseVal;
         
         
+        [SerializeField] public skill _partSkill;
+
         // [SerializeField] _partSkill
         private void Awake()
         {
@@ -41,6 +43,7 @@ namespace Stat_Classes
             Chest,
             Legs
         }
+        
 
         private void CalculateStatValue()
         {
