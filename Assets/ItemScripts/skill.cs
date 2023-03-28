@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+namespace Stat_Classes{
 
 public class skill : MonoBehaviour
 {
@@ -30,4 +31,5 @@ public class skill : MonoBehaviour
         epBurn,
         weaken
     }
+}
 }

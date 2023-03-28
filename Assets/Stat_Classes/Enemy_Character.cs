@@ -7,6 +7,7 @@ using Stat_Classes;
 
     public class Enemy_Character : Character    //maybe should be a virtual class for specific enemy types to inherit from
     {
+        public int enemyID;
     /*    List<item> dropList;
         item selectdrop()
         {

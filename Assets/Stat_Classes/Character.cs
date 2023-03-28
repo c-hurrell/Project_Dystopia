@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
     public int hitpoints, energypoints, attack, defence, speed; 
     // #Notes for the player these will be calculated but for enemies these will be hand made potentially - or would be decided for bosses only etc.
 
-
+    public List<skill> currentSkills;
 
     // Possible removal unsure currently
     public int xp;
@@ -70,7 +70,16 @@ public class Character : MonoBehaviour
                 break;
         }
     }
-
-
+    public void PartSkillAdd()
+    {
+        currentSkills.Add(headPart._partSkill);
+        currentSkills.Add(armsPart._partSkill);
+        currentSkills.Add(chestPart._partSkill);
+        currentSkills.Add(legsPart._partSkill);
+        currentSkills.Add(powerCore._partSkill);
+        currentSkills.Add(personaCore._partSkill);
+    }
+    
+    
 
 }
