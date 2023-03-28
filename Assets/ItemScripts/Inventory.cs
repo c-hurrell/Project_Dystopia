@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            Debug.Log(" === TAB ===");
             ToggleInventoryUI();
         }
     }
@@ -36,11 +37,11 @@ public class Inventory : MonoBehaviour
     {
         if (inventoryUI.activeSelf)
         {
-            inventoryUI.SetActive(true);
+            inventoryUI.SetActive(false);
         }
         else
         {
-            inventoryUI.SetActive(false);
+            inventoryUI.SetActive(true);
         }
     }
     

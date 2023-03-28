@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Part.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Part.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Enemy_Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Enemy_Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +93,17 @@
       <workItem from="1679836391917" duration="5046000" />
       <workItem from="1679841856291" duration="797000" />
       <workItem from="1679933806745" duration="656000" />
-      <workItem from="1680005958821" duration="2712000" />
+      <workItem from="1680005958821" duration="3560000" />
+      <workItem from="1680017048000" duration="1885000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed Conflicts">
+      <created>1680009930952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680009930952</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,5 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Fixed Conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Conflicts" />
   </component>
 </project>
