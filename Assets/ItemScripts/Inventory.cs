@@ -10,6 +10,9 @@ public class Inventory : MonoBehaviour
     [Header("Updated during gameplay")] 
     [SerializeField] private Player_Character playerChar;
 
+    [Space] [Header("InventoryUI")] 
+    [SerializeField] private GameObject inventoryUI;
+
     public List<Item> Items;
     public List<Part> Parts;
     
@@ -19,6 +22,26 @@ public class Inventory : MonoBehaviour
     {
         //GameObject.FindWithTag("Player");
         playerChar = player.GetComponent<Player_Character>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ToggleInventoryUI();
+        }
+    }
+
+    private void ToggleInventoryUI()
+    {
+        if (inventoryUI.activeSelf)
+        {
+            inventoryUI.SetActive(true);
+        }
+        else
+        {
+            inventoryUI.SetActive(false);
+        }
     }
     
     // Functions for Adding and Removing items
