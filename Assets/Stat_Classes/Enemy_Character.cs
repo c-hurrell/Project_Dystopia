@@ -7,10 +7,11 @@ using Stat_Classes;
 
     public class Enemy_Character : Character    //maybe should be a virtual class for specific enemy types to inherit from
     {
+        [SerializeField] private Inventory inventory;
         public int enemyID; 
         //List<item> dropList;
-        List<Part> partDrops = new List<Part>();
-        private Part droppedPart;
+        List<GameObject> partDrops;
+        private GameObject droppedPart;
         
         // item selectdrop()
         // {
@@ -20,17 +21,16 @@ using Stat_Classes;
         // }*/
         private void Start()
         {
-            partDrops.Add(headPart);
-            partDrops.Add(chestPart);
-            partDrops.Add(armsPart);
-            partDrops.Add(legsPart);
-            //partDrops.Add(personaCore);
-            partDrops.Add(powerCore);
+            partDrops.Add(head);
+            partDrops.Add(chest);
+            partDrops.Add(arms);
+            partDrops.Add(legs);
         }
         void OnDeath()
         {
             int partIndex = Random.Range(0,partDrops.Count);
             droppedPart = partDrops[partIndex];
+            inventory.AddPart(droppedPart);
         }
     }
 

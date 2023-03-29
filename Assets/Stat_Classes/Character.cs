@@ -8,6 +8,9 @@ public class Character : MonoBehaviour
 {
     // Annoying there isnt a quicker way to make this all public
     // if anyone has an idea on how to let me know
+    [Header("GameManager")] [SerializeField]
+    public GameObject gameManager;
+    [Space]
     // Character Identifiers 
     [Header("Character Identifiers")]
     public int id;
@@ -29,11 +32,25 @@ public class Character : MonoBehaviour
     public Part chestPart;
     public Part headPart; 
     public Part legsPart;
-    public Part powerCore; //<< single slot effects some kind of MP system? >> ~ Input needed from combat design
-    //public Part personaCore; //<< determines specialty of enemy specific types based off of Jungian archetypes perhaps determining certain skill sets >> removing for now
+
+    public GameObject arms;
+    public GameObject chest;
+    public GameObject head;
+    public GameObject legs;
+    
 
 
     // Add in Unity Event trigger? So when parts on a character are changed an event is raised?
+
+    void Start()
+    {
+        armsPart = arms.GetComponent<Part>();
+        chestPart = chest.GetComponent<Part>();
+        headPart = head.GetComponent<Part>();
+        legsPart = legs.GetComponent<Part>();
+        
+        StatTotals();
+    }
     
     // Calculates the totals for each part
     public void StatTotals()
@@ -42,8 +59,6 @@ public class Character : MonoBehaviour
         PartStatCalc(chestPart);
         PartStatCalc(headPart);
         PartStatCalc(legsPart);
-        PartStatCalc(powerCore);
-        //PartStatCalc(personaCore);
     }
     // Used in to calculate the stat addition of a part
     private void PartStatCalc(Part part)
@@ -76,31 +91,31 @@ public class Character : MonoBehaviour
         currentSkills.Add(armsPart._partSkill);
         currentSkills.Add(chestPart._partSkill);
         currentSkills.Add(legsPart._partSkill);
-        currentSkills.Add(powerCore._partSkill);
     }
     
     
-    public void ChangePart(Part part)
+    public void ChangePart(GameObject partItem)
     {
+        var part = partItem.GetComponent<Part>();
         switch (part.partType)
         {
             case Part.PartType.Head:
+                head = partItem;
                 headPart = part;
                 StatTotals();
                 break;
             case Part.PartType.Arms:
+                arms = partItem;
                 armsPart = part;
                 StatTotals();
                 break;
             case Part.PartType.Chest:
+                chest = partItem;
                 chestPart = part;
                 StatTotals();
                 break;
-            case Part.PartType.PowerCore:
-                powerCore = part;
-                StatTotals();
-                break;
             case Part.PartType.Legs:
+                legs = partItem;
                 legsPart = part;
                 StatTotals();
                 break;

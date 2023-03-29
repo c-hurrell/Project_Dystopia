@@ -11,7 +11,7 @@ namespace Stat_Classes
         [SerializeField] private string _partName;
         [SerializeField] public PartType partType;
         [Space]
-        [Header("Part Level")]
+        [Header("Part Level")] 
         [SerializeField] private int _partLvl;
 
         [Space] [Header("Part Stats")] 
@@ -39,12 +39,10 @@ namespace Stat_Classes
         {
             Head,
             Arms,
-            PowerCore,
             Chest,
             Legs
         }
         
-
         private void CalculateStatValue()
         {
             _statVal = _statBaseVal + _statBaseVal * (_partLvl * 0.1);

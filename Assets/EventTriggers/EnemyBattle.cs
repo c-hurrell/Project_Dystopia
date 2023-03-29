@@ -6,6 +6,7 @@ namespace EventTriggers
     public class EnemyBattle : MonoBehaviour
     {
         [SerializeField] private Collider2D trigger;
+        
 
         private void Start()
         {
