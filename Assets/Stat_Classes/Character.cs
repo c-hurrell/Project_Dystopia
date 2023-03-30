@@ -16,8 +16,11 @@ public class Character : MonoBehaviour
     public int id;
     public string characterName;
 
-    // Character stats < - Will change in accordance to combat design ~ Waiting on input
-    [Header("Character Stats")]
+    // Character base stats < - Will change in accordance to combat design ~ Waiting on input
+    [Header("Base Stats")] [SerializeField]
+    private double hp = 50, ep = 30, baseAttack = 20, baseDefence = 20, baseSpeed = 20;
+    // Character Actual Stats
+    [Header("Character Stats")] [SerializeField]
     public double hitpoints, energypoints, attack, defence, speed; 
     // #Notes for the player these will be calculated but for enemies these will be hand made potentially - or would be decided for bosses only etc.
 
@@ -66,19 +69,19 @@ public class Character : MonoBehaviour
         switch (part._statType)
         {
             case Part.StatType.Attack:
-                attack += part._statVal;
+                attack = baseAttack + part._statVal;
                 break;
             case Part.StatType.Defence:
-                defence += part._statVal;
+                defence = baseDefence + part._statVal;
                 break;
             case Part.StatType.Ep:
-                energypoints += part._statVal;
+                energypoints = ep + part._statVal;
                 break;
             case Part.StatType.Hp:
-                hitpoints += part._statVal;
+                hitpoints = hp + part._statVal;
                 break;
             case Part.StatType.Speed:
-                speed += part._statVal;
+                speed = baseSpeed + part._statVal;
                 break;
             default:
                 Debug.Log(" > Error: Part must have a stat type");

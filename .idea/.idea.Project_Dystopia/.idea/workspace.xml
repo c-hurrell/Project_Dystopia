@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/TestChest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/TestChest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/test_head.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/test_head.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Part.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Part.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/TestChest 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/TestChest 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/test_head 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/test_head 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Player_Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Player_Character.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/charl/Documents/Team Software Engineering Development/Project_Dystopia/Assets/Character_Parts/Test_Parts/test_head 1.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/charl/Documents/Team Software Engineering Development/Project_Dystopia/Assets/Character_Parts/Test_Parts/test_head 1.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/charl/Documents/Team Software Engineering Development/Project_Dystopia/Assets/ItemScripts/Item.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ItemScripts/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/charl/Documents/Team Software Engineering Development/Project_Dystopia/Assets/ItemScripts/Part.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Party_Mechanics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/charl/Documents/Team Software Engineering Development/Project_Dystopia/Assets/Stat_Classes/Character.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.animation@7.0.8/Editor/SpritePostProcess.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -104,6 +105,7 @@
       <workItem from="1680102088069" duration="3405000" />
       <workItem from="1680110515287" duration="4966000" />
       <workItem from="1680131367284" duration="6789000" />
+      <workItem from="1680178877012" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Conflicts">
       <created>1680009930952</created>
