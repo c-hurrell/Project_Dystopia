@@ -100,7 +100,7 @@ MonoBehaviour:
   itemID: 1
   itemDescription: testHead for Testing Purposes
   sprite: {fileID: 21300000, guid: affe77e726ddf9c459baff781800bc0b, type: 3}
-  _partName: Test_Name
+  _partName: Test_Head
   partType: 0
   _partLvl: 1
   _statType: 4

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1980570095797589582}
   - component: {fileID: 5012025810771302365}
   m_Layer: 0
-  m_Name: TestChest
+  m_Name: TestLegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 028c720643cd18c4e958db90dca66ef0, type: 3}
+  m_Sprite: {fileID: 2747690628134850419, guid: 3e0549d4e404970459372d4f70e9f693, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,9 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4
   itemDescription: testing
-  sprite: {fileID: -2413806693520163455, guid: 028c720643cd18c4e958db90dca66ef0, type: 3}
-  _partName: TestChest02
-  partType: 2
+  sprite: {fileID: 2747690628134850419, guid: 3e0549d4e404970459372d4f70e9f693, type: 3}
+  _partName: TestLegs
+  partType: 3
   _partLvl: 1
   _statType: 0
   _statVal: 0

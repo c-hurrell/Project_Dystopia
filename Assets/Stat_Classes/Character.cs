@@ -61,7 +61,7 @@ public class Character : MonoBehaviour
         PartStatCalc(legsPart);
     }
     // Used in to calculate the stat addition of a part
-    private void PartStatCalc(Part part)
+    public void PartStatCalc(Part part)
     {
         switch (part._statType)
         {
@@ -94,36 +94,7 @@ public class Character : MonoBehaviour
     }
     
     
-    public void ChangePart(GameObject partItem)
-    {
-        var part = partItem.GetComponent<Part>();
-        switch (part.partType)
-        {
-            case Part.PartType.Head:
-                head = partItem;
-                headPart = part;
-                StatTotals();
-                break;
-            case Part.PartType.Arms:
-                arms = partItem;
-                armsPart = part;
-                StatTotals();
-                break;
-            case Part.PartType.Chest:
-                chest = partItem;
-                chestPart = part;
-                StatTotals();
-                break;
-            case Part.PartType.Legs:
-                legs = partItem;
-                legsPart = part;
-                StatTotals();
-                break;
-            default:
-                Debug.Log(" > Error: Part doesn't have a type");
-                break;
-        }
-    }
+    
 
 
 

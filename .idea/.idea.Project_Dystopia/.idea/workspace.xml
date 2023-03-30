@@ -6,15 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/TestChest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/TestChest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/test_head.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character_Parts/Test_Parts/test_head.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameEntities/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameEntities/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Item.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ItemScripts/Part.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemScripts/Part.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HumbugLab.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Enemy_Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Enemy_Character.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stat_Classes/Player_Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stat_Classes/Player_Character.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +102,8 @@
       <workItem from="1680019968277" duration="620000" />
       <workItem from="1680094924082" duration="5152000" />
       <workItem from="1680102088069" duration="3405000" />
-      <workItem from="1680110515287" duration="4816000" />
+      <workItem from="1680110515287" duration="4966000" />
+      <workItem from="1680131367284" duration="6789000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed Conflicts">
       <created>1680009930952</created>
