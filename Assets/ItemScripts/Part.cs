@@ -8,11 +8,11 @@ namespace Stat_Classes
     {
         //[SerializeField] int _partId;
         [Header("Part Information")]
-        [SerializeField] private string _partName;
+        [SerializeField] public string _partName;
         [SerializeField] public PartType partType;
         [Space]
         [Header("Part Level")] 
-        [SerializeField] private int _partLvl;
+        [SerializeField] public int _partLvl;
 
         [Space] [Header("Part Stats")] 
         [SerializeField] public StatType _statType; // _statBonusType; // attack, defense etc
@@ -43,7 +43,7 @@ namespace Stat_Classes
             Legs
         }
         
-        private void CalculateStatValue()
+        public void CalculateStatValue()
         {
             _statVal = _statBaseVal + _statBaseVal * (_partLvl * 0.1);
         }

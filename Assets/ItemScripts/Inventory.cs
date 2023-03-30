@@ -22,9 +22,6 @@ public class Inventory : MonoBehaviour
 
     [Space] [Header("Test Parts")] 
     [SerializeField] private List<GameObject> TestParts;
-    
-    
-
     [SerializeField] private List<GameObject> itemSlots;
     public List<Item> Items;
     public List<Part> Parts;
@@ -63,18 +60,6 @@ public class Inventory : MonoBehaviour
         }
     }
     
-    // Functions for Adding and Removing items - > Have been removed as only parts exist in Inventory
-    // void AddItem(Item item)
-    // {
-    //     Items.Add(item);
-    // }
-    //
-    // void RemoveItem(Item item)
-    // {
-    //     var itemLoc = Items.IndexOf(item);
-    //     Items.RemoveAt(itemLoc);
-    // }
-
     // Functions for Adding and Removing parts
     public void AddPart(GameObject part)
     {
@@ -94,7 +79,8 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("I'm sorting parts" + i);
             var itemSlot = itemSlots[i].GetComponent<Button>();
-            itemSlot.enabled = true;
+            itemSlots[i].SetActive(true);
+            
             itemSlot.image.sprite = TestParts[i].GetComponent<Part>().sprite;
         }
         for (var i = partNum; i < itemSlots.Count; i++)
@@ -104,42 +90,123 @@ public class Inventory : MonoBehaviour
         }
     }
     // Equips a part to the player
+    // public void EquipPart(int partSlot)
+    // {
+    //     Debug.Log(partSlot);
+    //     var part = TestParts[partSlot].GetComponent<Part>(); 
+    //     Debug.Log("EquipPart: " + part.name);
+    //     switch (part.partType)
+    //     {
+    //         case Part.PartType.Head:
+    //             Debug.Log("Head");
+    //             // Removes Part at this location
+    //             RemovePart(partSlot);
+    //             // Takes in GameObject
+    //             //AddPart(playerChar.head);
+    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
+    //             headSlot.image.sprite = part.sprite;
+    //             break;
+    //         case Part.PartType.Arms:
+    //             RemovePart(partSlot);
+    //             //AddPart(playerChar.arms);
+    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
+    //             armsSlot.image.sprite = part.sprite;
+    //             break;
+    //         case Part.PartType.Chest:
+    //             RemovePart(partSlot);
+    //             //AddPart(playerChar.chest);
+    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
+    //             chestSlot.image.sprite = part.sprite;
+    //             break;
+    //         case Part.PartType.Legs:
+    //             RemovePart(partSlot);
+    //             //AddPart(playerChar.legs);
+    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
+    //             legsSlot.image.sprite = part.sprite;
+    //             break;
+    //         default:
+    //             Debug.Log(" > Error: Part should have a type!");
+    //             break;
+    //     }
+    //     SortPartList();
+    //     
+    // }
     public void EquipPart(int partSlot)
     {
-        var part = TestParts[partSlot].GetComponent<Part>(); 
-        switch (part.partType)
+        // Get the Part component of the inventory item
+        var inventoryPart = TestParts[partSlot].GetComponent<Part>();
+
+        // Part going to inventory
+        GameObject toInventory;
+        
+        // Part data
+        Part playerPart;
+        
+        // Copy data
+        string partName;
+        Part.StatType statType;
+        Sprite sprite;
+        double statBaseVal;
+        int partLvl;
+
+        switch (inventoryPart.partType)
         {
             case Part.PartType.Head:
-                // Removes Part at this location
-                RemovePart(partSlot);
-                // Takes in GameObject
-                AddPart(playerChar.head);
-                playerChar.ChangePart(TestParts[partSlot]);
-                headSlot.image.sprite = part.sprite;
+                toInventory = playerChar.head;
+                playerPart = playerChar.headPart;
+                //playerChar.ChangePart(TestParts[partSlot]);
                 break;
             case Part.PartType.Arms:
-                RemovePart(partSlot);
-                AddPart(playerChar.arms);
-                playerChar.ChangePart(TestParts[partSlot]);
-                armsSlot.image.sprite = part.sprite;
+                toInventory = playerChar.arms;
+                playerPart = playerChar.armsPart;
+                //playerChar.ChangePart(TestParts[partSlot]);
                 break;
             case Part.PartType.Chest:
-                RemovePart(partSlot);
-                AddPart(playerChar.chest);
-                playerChar.ChangePart(TestParts[partSlot]);
-                chestSlot.image.sprite = part.sprite;
+                toInventory = playerChar.chest;
+                playerPart = playerChar.chestPart;
+                //playerChar.ChangePart(TestParts[partSlot]);
                 break;
             case Part.PartType.Legs:
-                RemovePart(partSlot);
-                AddPart(playerChar.legs);
-                playerChar.ChangePart(TestParts[partSlot]);
-                legsSlot.image.sprite = part.sprite;
+                toInventory = playerChar.legs;
+                playerPart = playerChar.legsPart;
+                //playerChar.ChangePart(TestParts[partSlot]);
                 break;
             default:
-                Debug.Log(" > Error: Part should have a type!");
-                break;
+                Debug.Log("Error: Part should have a type!");
+                return;
         }
-        SortPartList();
+        // Add part
+        toInventory.AddComponent<Part>();
         
+        // Save Values
+        partName = playerPart._partName;
+        statType = playerPart._statType;
+        sprite = playerPart.sprite;
+        statBaseVal = playerPart._statBaseVal;
+        partLvl = playerPart._partLvl;
+        
+        // Apply Values
+        toInventory.GetComponent<Part>()._partName = partName;
+        toInventory.GetComponent<Part>()._statType = statType;
+        toInventory.GetComponent<Part>().sprite = sprite;
+        toInventory.GetComponent<Part>()._statBaseVal = statBaseVal;
+        toInventory.GetComponent<Part>()._partLvl = partLvl;
+        toInventory.GetComponent<Part>().CalculateStatValue();
+        // To do: Add Skill when implemented
+
+        playerChar.ChangePart(TestParts[partSlot]);
+        
+        // Remove the Part from the inventory and add it to the player
+        RemovePart(partSlot);
+        AddPart(toInventory);
+
+        // Swap the sprites in the inventory and gear UI
+        playerChar.UpdateUI();
+
+        // Recalculate the player's stats
+        playerChar.StatTotals();
+        
+        SortPartList();
     }
+
 }

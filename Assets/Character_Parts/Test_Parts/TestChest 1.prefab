@@ -11,46 +11,49 @@ GameObject:
   - component: {fileID: 4258843589322863532}
   - component: {fileID: 1980570095797589582}
   - component: {fileID: 5012025810771302365}
-  - component: {fileID: 601203031126043246}
-  - component: {fileID: 8012412818131607133}
-  - component: {fileID: -8646494373378595987}
-  - component: {fileID: 7000880296748383052}
-  - component: {fileID: 655166984980128387}
-  - component: {fileID: 7304900681810869507}
-  - component: {fileID: -7868789189971789273}
-  - component: {fileID: 1817664038558563043}
-  - component: {fileID: 2868613733185235328}
-  - component: {fileID: 3476610885290148182}
-  - component: {fileID: -7104513411541043128}
-  - component: {fileID: -5276541251712019991}
-  - component: {fileID: 8075630464135074791}
-  - component: {fileID: -3401418386947640226}
-  - component: {fileID: -2272691624837814296}
-  - component: {fileID: 5069133889309261}
-  - component: {fileID: 3492649401092121937}
-  - component: {fileID: 5605440769377744918}
-  - component: {fileID: -5292232319556150260}
-  - component: {fileID: 3521146751045140134}
-  - component: {fileID: -1575738466658205229}
-  - component: {fileID: 945986379983605147}
-  - component: {fileID: -4651921046999810301}
-  - component: {fileID: -6818094253745781660}
-  - component: {fileID: -284744527508339086}
-  - component: {fileID: 551962630161515817}
-  - component: {fileID: -1841487105929850521}
-  - component: {fileID: -8971665351378562111}
-  - component: {fileID: -8982114011418218618}
-  - component: {fileID: -1352941232732313579}
-  - component: {fileID: -4691667600104849891}
-  - component: {fileID: -8638437339544736039}
-  - component: {fileID: -6456461662219259021}
-  - component: {fileID: 7057982716755699219}
-  - component: {fileID: -129528322803535770}
-  - component: {fileID: -2720632257218643329}
-  - component: {fileID: -4085701541595621757}
-  - component: {fileID: 2278438099892205988}
+  - component: {fileID: -110013723657715041}
+  - component: {fileID: 1161888758975966759}
+  - component: {fileID: 3602707131917981926}
+  - component: {fileID: -8595488878599380821}
+  - component: {fileID: -1235933104280834807}
+  - component: {fileID: -8833652360039115201}
+  - component: {fileID: -8652389180451148052}
+  - component: {fileID: 8465289977787500863}
+  - component: {fileID: 2915251142034825414}
+  - component: {fileID: 1040433616698511262}
+  - component: {fileID: 1155938749602206797}
+  - component: {fileID: -5306099876897998358}
+  - component: {fileID: 2781982013585844958}
+  - component: {fileID: -3688583787246500240}
+  - component: {fileID: -8723933925198800309}
+  - component: {fileID: -8341388499484640570}
+  - component: {fileID: 2467085248722662020}
+  - component: {fileID: 1238174560612777447}
+  - component: {fileID: -15757208792498260}
+  - component: {fileID: 2011842049520884451}
+  - component: {fileID: 8996627810800180976}
+  - component: {fileID: -6900205495619717321}
+  - component: {fileID: 8954962392396059174}
+  - component: {fileID: 9198620149553276974}
+  - component: {fileID: -7043482288354707305}
+  - component: {fileID: 2369739670710464775}
+  - component: {fileID: -7844331028788890389}
+  - component: {fileID: -1262533276571436427}
+  - component: {fileID: 966188737789256051}
+  - component: {fileID: -6873915405747034995}
+  - component: {fileID: 526996795846305928}
+  - component: {fileID: -683920807012761437}
+  - component: {fileID: 8848800852790030881}
+  - component: {fileID: -7649776804930069445}
+  - component: {fileID: -980814971785082319}
+  - component: {fileID: 782792460690612684}
+  - component: {fileID: 4751622645547497353}
+  - component: {fileID: -433209662096775825}
+  - component: {fileID: 918188489671737698}
+  - component: {fileID: 1195228779037592986}
+  - component: {fileID: 4092576187687571114}
   m_Layer: 0
-  m_Name: TestChest
+  m_Name: TestChest 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +115,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 028c720643cd18c4e958db90dca66ef0, type: 3}
+  m_Sprite: {fileID: 3625043607559282579, guid: e12d2c4274ea6bd4a933c5b006a51ced, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 4
   itemDescription: testing
-  sprite: {fileID: -2413806693520163455, guid: 028c720643cd18c4e958db90dca66ef0, type: 3}
+  sprite: {fileID: 3625043607559282579, guid: e12d2c4274ea6bd4a933c5b006a51ced, type: 3}
   _partName: TestChest02
   partType: 2
   _partLvl: 1
@@ -145,7 +148,7 @@ MonoBehaviour:
   _statVal: 11
   _statBaseVal: 10
   _partSkill: {fileID: 0}
---- !u!114 &601203031126043246
+--- !u!114 &-110013723657715041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,7 +170,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &8012412818131607133
+--- !u!114 &1161888758975966759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,7 +192,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-8646494373378595987
+--- !u!114 &3602707131917981926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +214,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &7000880296748383052
+--- !u!114 &-8595488878599380821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,7 +236,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &655166984980128387
+--- !u!114 &-1235933104280834807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +258,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &7304900681810869507
+--- !u!114 &-8833652360039115201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,7 +280,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-7868789189971789273
+--- !u!114 &-8652389180451148052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,7 +302,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &1817664038558563043
+--- !u!114 &8465289977787500863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,7 +324,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &2868613733185235328
+--- !u!114 &2915251142034825414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -343,7 +346,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &3476610885290148182
+--- !u!114 &1040433616698511262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,7 +368,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-7104513411541043128
+--- !u!114 &1155938749602206797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,7 +390,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-5276541251712019991
+--- !u!114 &-5306099876897998358
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,7 +412,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &8075630464135074791
+--- !u!114 &2781982013585844958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -431,7 +434,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-3401418386947640226
+--- !u!114 &-3688583787246500240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -453,7 +456,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-2272691624837814296
+--- !u!114 &-8723933925198800309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,7 +478,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &5069133889309261
+--- !u!114 &-8341388499484640570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,7 +500,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &3492649401092121937
+--- !u!114 &2467085248722662020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -519,7 +522,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &5605440769377744918
+--- !u!114 &1238174560612777447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -541,7 +544,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-5292232319556150260
+--- !u!114 &-15757208792498260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,7 +566,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &3521146751045140134
+--- !u!114 &2011842049520884451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -585,7 +588,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-1575738466658205229
+--- !u!114 &8996627810800180976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -607,7 +610,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &945986379983605147
+--- !u!114 &-6900205495619717321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,7 +632,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-4651921046999810301
+--- !u!114 &8954962392396059174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,7 +654,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-6818094253745781660
+--- !u!114 &9198620149553276974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,7 +676,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-284744527508339086
+--- !u!114 &-7043482288354707305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -695,7 +698,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &551962630161515817
+--- !u!114 &2369739670710464775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,7 +720,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-1841487105929850521
+--- !u!114 &-7844331028788890389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -739,7 +742,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-8971665351378562111
+--- !u!114 &-1262533276571436427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -761,7 +764,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-8982114011418218618
+--- !u!114 &966188737789256051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -783,7 +786,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-1352941232732313579
+--- !u!114 &-6873915405747034995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -805,7 +808,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-4691667600104849891
+--- !u!114 &526996795846305928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,7 +830,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-8638437339544736039
+--- !u!114 &-683920807012761437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -849,7 +852,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-6456461662219259021
+--- !u!114 &8848800852790030881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -871,7 +874,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &7057982716755699219
+--- !u!114 &-7649776804930069445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -893,7 +896,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-129528322803535770
+--- !u!114 &-980814971785082319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -915,7 +918,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-2720632257218643329
+--- !u!114 &782792460690612684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -937,7 +940,7 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &-4085701541595621757
+--- !u!114 &4751622645547497353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -959,7 +962,73 @@ MonoBehaviour:
   _statVal: 0
   _statBaseVal: 0
   _partSkill: {fileID: 0}
---- !u!114 &2278438099892205988
+--- !u!114 &-433209662096775825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376430687877762256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f49ddc1707c34a8cba038af673db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 0
+  itemDescription: 
+  sprite: {fileID: 0}
+  _partName: 
+  partType: 0
+  _partLvl: 0
+  _statType: 0
+  _statVal: 0
+  _statBaseVal: 0
+  _partSkill: {fileID: 0}
+--- !u!114 &918188489671737698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376430687877762256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f49ddc1707c34a8cba038af673db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 0
+  itemDescription: 
+  sprite: {fileID: 0}
+  _partName: 
+  partType: 0
+  _partLvl: 0
+  _statType: 0
+  _statVal: 0
+  _statBaseVal: 0
+  _partSkill: {fileID: 0}
+--- !u!114 &1195228779037592986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376430687877762256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f49ddc1707c34a8cba038af673db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 0
+  itemDescription: 
+  sprite: {fileID: 0}
+  _partName: 
+  partType: 0
+  _partLvl: 0
+  _statType: 0
+  _statVal: 0
+  _statBaseVal: 0
+  _partSkill: {fileID: 0}
+--- !u!114 &4092576187687571114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
