@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/CombatEventHandle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/CombatEventHandle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/EnemyBattle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventTriggers/EnemyBattle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy/EnemyBattle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerBattleStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerBattleStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemyBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EnemyBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/World/ProgressionStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/World/ProgressionStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/World/PartyMemberData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/World/PartyMemberData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/28/c0ccd9c8/Coroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/56/279de7b8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/b9/15936dca/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11507990acf49f6b191f24cb39dcb58158800/da/399f726c/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Combat/CombatBg.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBattle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ItemScripts/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -37,6 +41,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectId" id="2IVBBy9Sx4wwSKUttnYdJWnIDpY" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -45,30 +50,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\eddio\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\eddio\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\eddio\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/yuu0141/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/home/yuu0141/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/home/yuu0141/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.14f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\eddio\src\Project_Dystopia -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\eddio\src\Project_Dystopia" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -76,7 +81,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.14f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.14f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\charl\Documents\Team Software Engineering Development\Project_Dystopia&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\charl\Documents\Team Software Engineering Development\Project_Dystopia" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -122,6 +127,8 @@
       <workItem from="1677186499884" duration="1793000" />
       <workItem from="1677513229486" duration="646000" />
       <workItem from="1679919114276" duration="5251000" />
+      <workItem from="1680448593514" duration="3620000" />
+      <workItem from="1680731560794" duration="426000" />
     </task>
     <servers />
   </component>
