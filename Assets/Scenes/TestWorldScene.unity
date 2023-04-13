@@ -3299,8 +3299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ba6b70b8c14ea89ab549243522a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _originalScale: {x: 0, y: 0, z: 0}
-  <IsPaused>k__BackingField: 0
 --- !u!1 &1527605054 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4549517350533410311, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
@@ -3446,6 +3444,30 @@ PrefabInstance:
     - target: {fileID: 7797764978236919477, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
       propertyPath: m_Name
       value: Enemy battle trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.minSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.maxAttack
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.minAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.minHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7797764978236919482, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
       propertyPath: m_RootOrder
