@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="handle death and return to main world">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerBattleStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerBattleStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" afterDir="false" />
-    </list>
+    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="player damage and defend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,9 +20,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Combat/CombatBg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyActions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Enemy/EncounterData.cs" root0="SKIP_HIGHLIGHTING" />
@@ -36,6 +35,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Party_Mechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/EnemyBattle.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/EnemyBattle.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/TestWorldScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Stat_Classes/Player_Character.cs" root0="SKIP_HIGHLIGHTING" />
@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681402946862</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="player damage and defend">
+      <created>1681408252615</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681408252615</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +229,7 @@
     <MESSAGE value="added death" />
     <MESSAGE value="changed to function for taking damage" />
     <MESSAGE value="handle death and return to main world" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle death and return to main world" />
+    <MESSAGE value="player damage and defend" />
+    <option name="LAST_COMMIT_MESSAGE" value="player damage and defend" />
   </component>
 </project>

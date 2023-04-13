@@ -133,14 +133,27 @@ namespace Combat
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
         {
-            var deaths = _enemyStatuses.Where(x => x.dying).ToList();
-            Debug.Log("Waiting for " + deaths.Count + " enemies to die");
-            yield return new WaitWhile(() =>
+            var enemyDeaths = _enemyStatuses.Where(x => x.dying).ToList();
+            if (enemyDeaths.Count > 0)
             {
-                deaths.RemoveAll(x => !x.dying);
-                return deaths.Count > 0;
-            });
+                Debug.Log("Waiting for " + enemyDeaths.Count + " enemies to die");
+                yield return new WaitWhile(() =>
+                {
+                    enemyDeaths.RemoveAll(x => !x.dying);
+                    return enemyDeaths.Count > 0;
+                });
+            }
 
+            var playerDeaths = _playerStatuses.Where(x => x.dying).ToList();
+            if (playerDeaths.Count > 0)
+            {
+                Debug.Log("Waiting for " + playerDeaths.Count + " players to die");
+                yield return new WaitWhile(() =>
+                {
+                    playerDeaths.RemoveAll(x => !x.dying);
+                    return playerDeaths.Count > 0;
+                });
+            }
 
             _enemyStatuses.RemoveAll(x => x == null);
             _playerStatuses.RemoveAll(x => x == null);
@@ -193,7 +206,7 @@ namespace Combat
                 attack.Execute(_enemyStatuses, _playerStatuses, status);
                 yield return new WaitForSeconds(EnemyTurnDelay);
             }
-            
+
             Debug.Log("Enemy's turn is over");
 
             _isEnemyTurn = false;
