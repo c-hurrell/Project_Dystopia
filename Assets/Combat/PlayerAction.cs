@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Combat
 {
@@ -27,7 +28,9 @@ namespace Combat
             IEnumerable<PlayerBattleStatus> playerStatuses, PlayerBattleStatus playerStatus)
         {
             var enemyStatus = enemyStatuses.ElementAt(TargetIndex);
-            enemyStatus.health -= playerStatus.attack;
+            enemyStatus.TakeDamage(playerStatus.attack);
+
+            Debug.Log("Player attacked enemy index " + TargetIndex);
         }
     }
 }
