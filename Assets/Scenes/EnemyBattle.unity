@@ -429,7 +429,6 @@ GameObject:
   - component: {fileID: 385293907}
   - component: {fileID: 385293906}
   - component: {fileID: 385293905}
-  - component: {fileID: 385293908}
   m_Layer: 0
   m_Name: Main camera
   m_TagString: Untagged
@@ -503,21 +502,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &385293908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385293904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d91187d7f57f5b42876c63cb372ffd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combatant1: {fileID: 0}
-  combatant2: {fileID: 0}
-  turnInt: 1
 --- !u!1 &401191394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1069,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 738835473}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1476948084731508022}
+        m_TargetAssemblyTypeName: Combat.TurnBasedCombatHandler, Assembly-CSharp
+        m_MethodName: PlayerAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &738835473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,3 +1667,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+--- !u!114 &1476948084731508022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+  m_PrefabInstance: {fileID: 1476948084731508021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab5ebe93c1542d88b86cf7699a4226d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
