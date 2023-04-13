@@ -20,26 +20,47 @@ namespace Combat
         private List<PlayerBattleStatus> _playerStatuses = new();
 
         private const float EnemyTurnDelay = 1f;
-        
+
         private int _targetEnemy;
 
         private void Start()
         {
-            if (enemyPrefabs == null || enemyPrefabs.Length != Enum.GetValues(typeof(EnemyType)).Length)
+            if (enemyPrefabs == null)
             {
-                Debug.LogError("Enemy prefabs are null or not all enemy types are assigned");
-                return;
+                Debug.LogWarning("Enemy prefabs are null");
+                enemyPrefabs = Array.Empty<GameObject>();
             }
 
-            if (playerPrefabs == null || playerPrefabs.Length < ProgressionStatus.PartyMembers.Count)
+            if (playerPrefabs == null)
             {
-                Debug.LogError("Player prefabs are null or not all party members are assigned");
-                return;
+                Debug.LogWarning("Player prefabs are null");
+                playerPrefabs = Array.Empty<GameObject>();
+            }
+
+            if (enemyPrefabs.Length != Enum.GetValues(typeof(EnemyType)).Length)
+            {
+                Debug.LogWarning("Enemy prefabs are null or not all enemy types are assigned");
+            }
+
+            if (playerPrefabs.Length < ProgressionStatus.PartyMembers.Count)
+            {
+                Debug.LogWarning("Player prefabs are null or not all party members are assigned");
             }
 
             foreach (var partyMember in ProgressionStatus.PartyMembers)
             {
-                var player = Instantiate(playerPrefabs[(int)partyMember.MemberType]);
+                var memberTypeIndex = (int)partyMember.MemberType;
+                GameObject player;
+                if (memberTypeIndex >= playerPrefabs.Length)
+                {
+                    Debug.LogWarning($"Party member {partyMember.MemberType} is not assigned to a prefab");
+                    player = new();
+                }
+                else
+                {
+                    player = Instantiate(playerPrefabs[(int)partyMember.MemberType]);
+                }
+
                 var status = player.AddComponent<PlayerBattleStatus>();
                 status.CopyFrom(partyMember);
 
@@ -52,11 +73,32 @@ namespace Combat
 
             for (var i = 0; i < currentEncounter.enemyCount; i++)
             {
-                var enemy = Instantiate(enemyPrefabs[(int)currentEncounter.enemyType]);
+                var enemyTypeIndex = (int)currentEncounter.enemyType;
+                GameObject enemy;
+                if (enemyTypeIndex >= enemyPrefabs.Length)
+                {
+                    Debug.LogWarning($"Enemy type {currentEncounter.enemyType} is not assigned to a prefab");
+                    enemy = new();
+                }
+                else
+                {
+                    enemy = Instantiate(enemyPrefabs[(int)currentEncounter.enemyType]);
+                }
+
                 var status = enemy.AddComponent<EnemyBattleStatus>();
                 status.health = Random.Range(currentEncounter.minHealth, currentEncounter.maxHealth + 1);
+                status.attack = Random.Range(currentEncounter.minAttack, currentEncounter.maxAttack + 1);
+                status.speed = Random.Range(currentEncounter.minSpeed, currentEncounter.maxSpeed + 1);
 
                 _enemyStatuses.Add(status);
+            }
+
+            var totalPlayerSpeed = _playerStatuses.Sum(x => x.speed);
+            var totalEnemySpeed = _enemyStatuses.Sum(x => x.speed);
+
+            if (totalEnemySpeed > totalPlayerSpeed)
+            {
+                StartCoroutine(EnemyActCoroutine());
             }
         }
 
@@ -83,14 +125,19 @@ namespace Combat
 
         public void PlayerAttack()
         {
+            if (_isEnemyTurn) return;
             PlayerAct(PlayerActionType.Attack, _targetEnemy);
         }
+
+        private bool _isEnemyTurn;
 
         /// <summary>
         /// Coroutine that runs after player's turn to handle enemy's turn
         /// </summary>
         private IEnumerator EnemyActCoroutine()
         {
+            _isEnemyTurn = true;
+            Debug.Log("Enemy's turn");
             yield return new WaitForSeconds(EnemyTurnDelay);
 
             for (var i = 0; i < _enemyStatuses.Count; i++)
@@ -100,6 +147,8 @@ namespace Combat
                 attack.Execute(_enemyStatuses, _playerStatuses, _enemyStatuses[i]);
                 yield return new WaitForSeconds(EnemyTurnDelay);
             }
+
+            _isEnemyTurn = false;
         }
     }
 }
