@@ -11,6 +11,8 @@ namespace Combat
         private void Start()
         {
             var currentArea = ProgressionStatus.CurrentArea;
+            if (backgrounds.Count <= (int)currentArea)
+                return;
             var background = backgrounds[(int)currentArea];
             GetComponent<SpriteRenderer>().sprite = background;
         }
