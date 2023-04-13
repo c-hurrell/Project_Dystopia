@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 using Utils;
 
 namespace Combat
@@ -15,7 +16,9 @@ namespace Combat
             IEnumerable<PlayerBattleStatus> playerStatuses, EnemyBattleStatus enemyStatus)
         {
             var playerStatus = playerStatuses.RandomElement();
-            playerStatus.health -= enemyStatus.attack;
+            playerStatus.TakeDamage(enemyStatus.attack);
+
+            Debug.Log("Enemy attacked player");
         }
     }
 }

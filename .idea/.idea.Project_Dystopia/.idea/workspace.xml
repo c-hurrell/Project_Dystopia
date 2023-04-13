@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="changed to function for taking damage">
+    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="handle death and return to main world">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/EnemyBattleStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/EnemyBattleStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerBattleStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerBattleStatus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681402131084</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="handle death and return to main world">
+      <created>1681402946862</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681402946862</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +221,7 @@
     <MESSAGE value="extra enemy status" />
     <MESSAGE value="added death" />
     <MESSAGE value="changed to function for taking damage" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed to function for taking damage" />
+    <MESSAGE value="handle death and return to main world" />
+    <option name="LAST_COMMIT_MESSAGE" value="handle death and return to main world" />
   </component>
 </project>

@@ -115,9 +115,10 @@ namespace Combat
         /// </summary>
         private void PlayerAct(PlayerActionType action, int targetEnemy)
         {
-            var playerAction = action switch
+            PlayerAction playerAction = action switch
             {
                 PlayerActionType.Attack => new AttackAction(targetEnemy),
+                PlayerActionType.Defend => new DefendAction(),
                 _ => throw new ArgumentOutOfRangeException(nameof(action), action, null)
             };
 
@@ -168,6 +169,12 @@ namespace Combat
             PlayerAct(PlayerActionType.Attack, _targetEnemy);
         }
 
+        public void PlayerDefend()
+        {
+            if (_isEnemyTurn) return;
+            PlayerAct(PlayerActionType.Defend, _targetEnemy);
+        }
+
         private bool _isEnemyTurn;
 
         /// <summary>
@@ -179,15 +186,23 @@ namespace Combat
             Debug.Log("Enemy's turn");
             yield return new WaitForSeconds(EnemyTurnDelay);
 
-            for (var i = 0; i < _enemyStatuses.Count; i++)
+            foreach (var status in _enemyStatuses)
             {
                 // theres only attack now
                 var attack = new EnemyAttackAction();
-                attack.Execute(_enemyStatuses, _playerStatuses, _enemyStatuses[i]);
+                attack.Execute(_enemyStatuses, _playerStatuses, status);
                 yield return new WaitForSeconds(EnemyTurnDelay);
             }
+            
+            Debug.Log("Enemy's turn is over");
 
             _isEnemyTurn = false;
+
+            // stop player defending as turn is over
+            foreach (var playerStatus in _playerStatuses)
+            {
+                playerStatus.StopDefend();
+            }
         }
     }
 }

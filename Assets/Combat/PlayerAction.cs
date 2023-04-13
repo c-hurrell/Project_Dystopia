@@ -6,7 +6,8 @@ namespace Combat
 {
     public enum PlayerActionType
     {
-        Attack
+        Attack,
+        Defend
     }
 
     public abstract class PlayerAction
@@ -31,6 +32,15 @@ namespace Combat
             enemyStatus.TakeDamage(playerStatus.attack);
 
             Debug.Log("Player attacked enemy index " + TargetIndex);
+        }
+    }
+
+    public class DefendAction : PlayerAction
+    {
+        public override void Execute(IEnumerable<EnemyBattleStatus> enemyStatuses,
+            IEnumerable<PlayerBattleStatus> playerStatuses, PlayerBattleStatus playerStatus)
+        {
+            playerStatus.Defend();
         }
     }
 }
