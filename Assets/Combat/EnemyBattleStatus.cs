@@ -6,5 +6,6 @@ namespace Combat
     {
         public int health;
         public int attack;
+        public int speed;
     }
 }
