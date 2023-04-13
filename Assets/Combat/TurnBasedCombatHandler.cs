@@ -20,6 +20,8 @@ namespace Combat
         private List<PlayerBattleStatus> _playerStatuses = new();
 
         private const float EnemyTurnDelay = 1f;
+        
+        private int _targetEnemy;
 
         private void Start()
         {
@@ -61,7 +63,7 @@ namespace Combat
         /// <summary>
         /// Controls what the player does in the turn
         /// </summary>
-        public void PlayerAct(PlayerActionType action, int targetEnemy)
+        private void PlayerAct(PlayerActionType action, int targetEnemy)
         {
             var playerAction = action switch
             {
@@ -77,6 +79,11 @@ namespace Combat
                 _turnIndex = 0;
                 StartCoroutine(EnemyActCoroutine());
             }
+        }
+
+        public void PlayerAttack()
+        {
+            PlayerAct(PlayerActionType.Attack, _targetEnemy);
         }
 
         /// <summary>
