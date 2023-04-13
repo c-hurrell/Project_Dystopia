@@ -96,9 +96,17 @@ namespace Combat
             var totalPlayerSpeed = _playerStatuses.Sum(x => x.speed);
             var totalEnemySpeed = _enemyStatuses.Sum(x => x.speed);
 
+            Debug.Log("Total player speed: " + totalPlayerSpeed);
+            Debug.Log("Total enemy speed: " + totalEnemySpeed);
+
             if (totalEnemySpeed > totalPlayerSpeed)
             {
+                Debug.Log("Enemy has more speed than players, enemy turn first");
                 StartCoroutine(EnemyActCoroutine());
+            }
+            else
+            {
+                Debug.Log("Player has more speed than enemy, player turn first");
             }
         }
 
@@ -118,9 +126,40 @@ namespace Combat
 
             if (_turnIndex >= _playerStatuses.Count)
             {
-                _turnIndex = 0;
-                StartCoroutine(EnemyActCoroutine());
+                StartCoroutine(WaitForDeathsAndEnemyTurn());
             }
+        }
+
+        private IEnumerator WaitForDeathsAndEnemyTurn()
+        {
+            var deaths = _enemyStatuses.Where(x => x.dying).ToList();
+            Debug.Log("Waiting for " + deaths.Count + " enemies to die");
+            yield return new WaitWhile(() =>
+            {
+                deaths.RemoveAll(x => !x.dying);
+                return deaths.Count > 0;
+            });
+
+
+            _enemyStatuses.RemoveAll(x => x == null);
+            _playerStatuses.RemoveAll(x => x == null);
+
+            if (_enemyStatuses.Count == 0)
+            {
+                Debug.Log("Player won");
+                CombatManager.EndBattle();
+                yield break;
+            }
+
+            if (_playerStatuses.Count == 0)
+            {
+                Debug.Log("Player lost");
+                CombatManager.EndBattle();
+                yield break;
+            }
+
+            _turnIndex = 0;
+            StartCoroutine(EnemyActCoroutine());
         }
 
         public void PlayerAttack()

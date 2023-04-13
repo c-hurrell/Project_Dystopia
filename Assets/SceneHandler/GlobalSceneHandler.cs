@@ -12,6 +12,8 @@ namespace SceneHandler
 
         private AsyncOperation _loadingScene;
 
+        public static Scene CurrentScene { get; private set; }
+
         private void Awake()
         {
             if (_instance != null) return;
@@ -22,6 +24,7 @@ namespace SceneHandler
 
         public static void LoadScene(Scene scene)
         {
+            CurrentScene = scene;
             _instance.LoadSceneInternal(scene);
         }
 

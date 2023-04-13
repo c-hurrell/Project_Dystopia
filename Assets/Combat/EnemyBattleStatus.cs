@@ -9,6 +9,8 @@ namespace Combat
         public int attack;
         public int speed;
 
+        public bool dying;
+
         public void TakeDamage(int damage)
         {
             health -= damage;
@@ -23,7 +25,9 @@ namespace Combat
 
         private IEnumerator Die()
         {
+            dying = true;
             yield return new WaitForSeconds(2.0f);
+            dying = false;
             Destroy(gameObject);
         }
     }

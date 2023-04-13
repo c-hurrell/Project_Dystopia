@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="added check if no bg since we have no bg">
+    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="changed to function for taking damage">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/CombatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Combat/EnemyBattleStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/EnemyBattleStatus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/PlayerAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/TurnBasedCombatHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +26,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Combat/CombatBg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Enemy/EncounterData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBattle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ItemScripts/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Party_Mechanics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/EnemyBattle.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/TestWorldScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Stat_Classes/Player_Character.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/World/ProgressionStatus.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -156,7 +166,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681400611490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="extra enemy status">
+      <created>1681402107454</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681402107454</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added death">
+      <created>1681402116848</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681402116848</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changed to function for taking damage">
+      <created>1681402131084</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681402131084</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +212,9 @@
     <MESSAGE value="added function for GUI" />
     <MESSAGE value="updated" />
     <MESSAGE value="added check if no bg since we have no bg" />
-    <option name="LAST_COMMIT_MESSAGE" value="added check if no bg since we have no bg" />
+    <MESSAGE value="extra enemy status" />
+    <MESSAGE value="added death" />
+    <MESSAGE value="changed to function for taking damage" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to function for taking damage" />
   </component>
 </project>
