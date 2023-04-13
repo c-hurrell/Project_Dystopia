@@ -14,5 +14,9 @@ namespace Enemy
         [Range(1, 1000)] public int level = 1;
         [Range(1, 100000)] public int minHealth;
         [Range(1, 100000)] public int maxHealth;
+        [Range(1, 100000)] public int minAttack;
+        [Range(1, 100000)] public int maxAttack;
+        [Range(1, 100000)] public int minSpeed;
+        [Range(1, 100000)] public int maxSpeed;
     }
 }
