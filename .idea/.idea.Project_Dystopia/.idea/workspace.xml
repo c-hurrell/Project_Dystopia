@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Combat/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Combat/CombatManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneHandler/SceneBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EnemyBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EnemyBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SceneTypes/EnemyBattleScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SceneTypes/EnemyBattleScene.cs" afterDir="false" />
+    <list default="true" id="239135fb-b4d9-4112-8035-688d104cfad3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Dystopia/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestWorldScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,246 +13,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="development" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Combat/CombatBg.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/CombatManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyActions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/EnemyBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/PlayerBattleStatus.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Combat/TurnBasedCombatHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Enemy/EncounterData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Enemy/EnemyBattle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ItemScripts/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/MovementScripts/CharacterMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Party_Mechanics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SceneHandler/GlobalSceneHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/EnemyBattle.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/EnemyBattle.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Scenes/TestWorldScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/Stat_Classes/Player_Character.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/yuu0141/src/Project_Dystopia/Assets/World/PartyMemberData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/World/ProgressionStatus.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
-  <component name="ProjectId" id="2IVBBy9Sx4wwSKUttnYdJWnIDpY" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;combat-mechanics&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/yuu0141/.config/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
-      &quot;/home/yuu0141/.config/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
-      &quot;/home/yuu0141/.local/share/Symbols/src&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "combat-mechanics",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.14f1/Editor/Unity" />
-      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\eddio\src\Project_Dystopia -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\eddio\src\Project_Dystopia" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.14f1/Editor/Unity" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2021.3.14f1/Editor/Unity" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\charl\Documents\Team Software Engineering Development\Project_Dystopia&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\charl\Documents\Team Software Engineering Development\Project_Dystopia" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <method v="2" />
-    </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="996dcb41-5e21-4c53-acad-432409490f2b" name="Changes" comment="" />
-      <created>1670256741875</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1670256741875</updated>
-      <workItem from="1670256750578" duration="750000" />
-      <workItem from="1670257763657" duration="2315000" />
-      <workItem from="1674836704724" duration="4931000" />
-      <workItem from="1675434152851" duration="3584000" />
-      <workItem from="1676639428334" duration="644000" />
-      <workItem from="1677185410693" duration="916000" />
-      <workItem from="1677186360971" duration="62000" />
-      <workItem from="1677186499884" duration="1793000" />
-      <workItem from="1677513229486" duration="646000" />
-      <workItem from="1679919114276" duration="5251000" />
-      <workItem from="1680448593514" duration="3620000" />
-      <workItem from="1680731560794" duration="426000" />
-      <workItem from="1681392080216" duration="1818000" />
-      <workItem from="1681400380850" duration="1037000" />
-      <workItem from="1681480412456" duration="751000" />
-    </task>
-    <task id="LOCAL-00001" summary="added function for GUI">
-      <created>1681400485978</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1681400485978</updated>
-    </task>
-    <task id="LOCAL-00002" summary="updated">
-      <created>1681400594841</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681400594841</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added check if no bg since we have no bg">
-      <created>1681400611490</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681400611490</updated>
-    </task>
-    <task id="LOCAL-00004" summary="extra enemy status">
-      <created>1681402107454</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681402107454</updated>
-    </task>
-    <task id="LOCAL-00005" summary="added death">
-      <created>1681402116848</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681402116848</updated>
-    </task>
-    <task id="LOCAL-00006" summary="changed to function for taking damage">
-      <created>1681402131084</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1681402131084</updated>
-    </task>
-    <task id="LOCAL-00007" summary="handle death and return to main world">
-      <created>1681402946862</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1681402946862</updated>
-    </task>
-    <task id="LOCAL-00008" summary="player damage and defend">
-      <created>1681408252615</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1681408252615</updated>
-    </task>
-    <task id="LOCAL-00009" summary="wait for player deaths too">
-      <created>1681408361765</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1681408361765</updated>
-    </task>
-    <task id="LOCAL-00010" summary="lower max hp to 15">
-      <created>1681408436822</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1681408436822</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="added function for GUI" />
-    <MESSAGE value="updated" />
-    <MESSAGE value="added check if no bg since we have no bg" />
-    <MESSAGE value="extra enemy status" />
-    <MESSAGE value="added death" />
-    <MESSAGE value="changed to function for taking damage" />
-    <MESSAGE value="handle death and return to main world" />
-    <MESSAGE value="player damage and defend" />
-    <MESSAGE value="wait for player deaths too" />
-    <MESSAGE value="lower max hp to 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="lower max hp to 15" />
-  </component>
 </project>
