@@ -7,6 +7,7 @@ namespace Scenes.SceneTypes
     public class EnemyBattleScene : SceneBase
     {
         public override string SceneName => "EnemyBattle";
+        public override bool Additive => true;
 
         public override IEnumerator Load()
         {
