@@ -6,19 +6,20 @@ namespace Combat
     public static class CombatManager
     {
         public static EncounterData CurrentEncounter { get; private set; }
-        private static Scene _previousScene;
+        public static bool IsInCombat { get; private set; }
 
         public static void StartCombat(EncounterData encounterData)
         {
+            IsInCombat = true;
             CurrentEncounter = encounterData;
-            _previousScene = GlobalSceneHandler.CurrentScene;
             GlobalSceneHandler.LoadScene(Scene.EnemyBattle);
         }
 
         public static void EndBattle()
         {
+            IsInCombat = false;
             CurrentEncounter = null;
-            GlobalSceneHandler.LoadScene(_previousScene);
+            GlobalSceneHandler.UnloadScene(Scene.EnemyBattle);
         }
     }
 }
