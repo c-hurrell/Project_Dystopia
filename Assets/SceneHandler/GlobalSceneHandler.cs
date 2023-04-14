@@ -12,8 +12,6 @@ namespace SceneHandler
 
         private AsyncOperation _loadingScene;
 
-        public static Scene CurrentScene { get; private set; }
-
         private void Awake()
         {
             if (_instance != null) return;
@@ -24,23 +22,34 @@ namespace SceneHandler
 
         public static void LoadScene(Scene scene)
         {
-            CurrentScene = scene;
             _instance.LoadSceneInternal(scene);
+        }
+
+        public static void UnloadScene(Scene scene)
+        {
+            var loader = _instance.SceneEnumToScene(scene);
+            SceneManager.UnloadSceneAsync(loader.SceneName);
         }
 
         private void LoadSceneInternal(Scene scene)
         {
             // scuffed but this is fine for now
-            SceneBase loader = scene switch
+            var loader = SceneEnumToScene(scene);
+
+            _loadingScene = SceneManager.LoadSceneAsync(loader.SceneName,
+                loader.Additive ? LoadSceneMode.Additive : LoadSceneMode.Single);
+            _loadingScene.allowSceneActivation = false;
+            StartCoroutine(LoadSceneBg(loader));
+        }
+
+        private SceneBase SceneEnumToScene(Scene scene)
+        {
+            return scene switch
             {
                 Scene.TestWorld => new TestWorldScene(),
                 Scene.EnemyBattle => new EnemyBattleScene(),
                 _ => throw new ArgumentOutOfRangeException(nameof(scene), scene, null)
             };
-
-            _loadingScene = SceneManager.LoadSceneAsync(loader.SceneName);
-            _loadingScene.allowSceneActivation = false;
-            StartCoroutine(LoadSceneBg(loader));
         }
 
         private IEnumerator LoadSceneBg(SceneBase scene)
