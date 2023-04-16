@@ -191,44 +191,7 @@ namespace Combat
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
         {
-            var enemyDeaths = _enemyStatuses.Where(x => x.dying).ToList();
-            if (enemyDeaths.Count > 0)
-            {
-                Debug.Log("Waiting for " + enemyDeaths.Count + " enemies to die");
-                yield return new WaitWhile(() =>
-                {
-                    enemyDeaths.RemoveAll(x => !x.dying);
-                    return enemyDeaths.Count > 0;
-                });
-            }
-
-            var playerDeaths = _playerStatuses.Where(x => x.dying).ToList();
-            if (playerDeaths.Count > 0)
-            {
-                Debug.Log("Waiting for " + playerDeaths.Count + " players to die");
-                yield return new WaitWhile(() =>
-                {
-                    playerDeaths.RemoveAll(x => !x.dying);
-                    return playerDeaths.Count > 0;
-                });
-            }
-
-            RemoveDeletedEnemies();
-
-            if (_enemyStatuses.Count == 0)
-            {
-                Debug.Log("Player won");
-                CombatManager.EndBattle();
-                yield break;
-            }
-
-            if (_playerStatuses.Count == 0)
-            {
-                Debug.Log("Player lost");
-                CombatManager.EndBattle();
-                yield break;
-            }
-
+            yield return WaitForDeaths();
             _turnIndex = 0;
             StartCoroutine(EnemyActCoroutine());
         }
@@ -268,11 +231,11 @@ namespace Combat
                 // theres only attack now
                 var attack = new EnemyAttackAction();
                 attack.Execute(_enemyStatuses, _playerStatuses, status);
-
-                RemoveDeletedEnemies();
-
+                UpdateHud();
                 yield return new WaitForSeconds(EnemyTurnDelay);
             }
+
+            yield return WaitForDeaths();
 
             Debug.Log("Enemy's turn is over");
 
@@ -282,6 +245,46 @@ namespace Combat
             foreach (var playerStatus in _playerStatuses)
             {
                 playerStatus.StopDefend();
+            }
+        }
+
+        private IEnumerator WaitForDeaths()
+        {
+            var enemyDeaths = _enemyStatuses.Where(x => x.dying).ToList();
+            if (enemyDeaths.Count > 0)
+            {
+                Debug.Log("Waiting for " + enemyDeaths.Count + " enemies to die");
+                yield return new WaitWhile(() =>
+                {
+                    enemyDeaths.RemoveAll(x => !x.dying);
+                    return enemyDeaths.Count > 0;
+                });
+            }
+
+            var playerDeaths = _playerStatuses.Where(x => x.dying).ToList();
+            if (playerDeaths.Count > 0)
+            {
+                Debug.Log("Waiting for " + playerDeaths.Count + " players to die");
+                yield return new WaitWhile(() =>
+                {
+                    playerDeaths.RemoveAll(x => !x.dying);
+                    return playerDeaths.Count > 0;
+                });
+            }
+
+            RemoveDeletedEnemies();
+
+            if (_enemyStatuses.Count == 0)
+            {
+                Debug.Log("Player won");
+                CombatManager.EndBattle();
+                yield break;
+            }
+
+            if (_playerStatuses.Count == 0)
+            {
+                Debug.Log("Player lost");
+                CombatManager.EndBattle(EndBattleStatus.GameOver);
             }
         }
 
@@ -311,7 +314,8 @@ namespace Combat
             if (_playerStatuses.Count == 0) return;
 
             var playerStatus = _playerStatuses.First();
-            _playerHpText.text = $"{playerStatus.health}/{playerStatus.maxHealth}";
+            var playerHealth = Math.Max(playerStatus.health, 0);
+            _playerHpText.text = $"{playerHealth}/{playerStatus.maxHealth}";
 
             for (var i = 0; i < _enemyHpTexts.Count; i++)
             {

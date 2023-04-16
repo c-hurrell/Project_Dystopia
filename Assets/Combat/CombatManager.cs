@@ -15,11 +15,22 @@ namespace Combat
             GlobalSceneHandler.LoadScene(Scene.EnemyBattle);
         }
 
-        public static void EndBattle()
+        public static void EndBattle(EndBattleStatus status = EndBattleStatus.Normal)
         {
             IsInCombat = false;
             CurrentEncounter = null;
             GlobalSceneHandler.UnloadScene(Scene.EnemyBattle);
+
+            if (status == EndBattleStatus.GameOver)
+            {
+                GlobalSceneHandler.LoadScene(Scene.GameOver);
+            }
         }
+    }
+
+    public enum EndBattleStatus
+    {
+        Normal,
+        GameOver
     }
 }
