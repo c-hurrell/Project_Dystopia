@@ -48,6 +48,7 @@ namespace SceneHandler
             {
                 Scene.TestWorld => new TestWorldScene(),
                 Scene.EnemyBattle => new EnemyBattleScene(),
+                Scene.GameOver => new GameOverScene(),
                 _ => throw new ArgumentOutOfRangeException(nameof(scene), scene, null)
             };
         }
@@ -62,6 +63,7 @@ namespace SceneHandler
     public enum Scene
     {
         TestWorld,
-        EnemyBattle
+        EnemyBattle,
+        GameOver
     }
 }
