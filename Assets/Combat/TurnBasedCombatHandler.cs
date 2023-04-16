@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enemy;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using World;
 using Random = UnityEngine.Random;
 
@@ -15,6 +17,13 @@ namespace Combat
 
         [SerializeField] private GameObject[] enemyPrefabs;
         [SerializeField] private GameObject[] playerPrefabs;
+
+        [SerializeField] private GameObject enemyHudPrefab;
+
+        [FormerlySerializedAs("enemyHudContainer")] [SerializeField]
+        private GameObject combatHudContainer;
+
+        private TextMeshProUGUI _playerHpText;
 
         private readonly List<EnemyBattleStatus> _enemyStatuses = new();
         private List<PlayerBattleStatus> _playerStatuses = new();
@@ -108,6 +117,23 @@ namespace Combat
             {
                 Debug.Log("Player has more speed than enemy, player turn first");
             }
+
+            if (enemyHudPrefab == null)
+            {
+                Debug.LogError("Enemy HUD prefab is null");
+            }
+
+            if (combatHudContainer == null)
+            {
+                Debug.LogError("Enemy HUD container is null");
+            }
+            else
+            {
+                _playerHpText = combatHudContainer.transform.Find("PlayerHPEP").Find("Health")
+                    .GetComponent<TextMeshProUGUI>();
+            }
+
+            UpdateHud();
         }
 
         /// <summary>
@@ -123,6 +149,8 @@ namespace Combat
             };
 
             playerAction.Execute(_enemyStatuses, _playerStatuses, _playerStatuses[_turnIndex]);
+            UpdateHud();
+
             _turnIndex++;
 
             if (_turnIndex >= _playerStatuses.Count)
@@ -155,8 +183,7 @@ namespace Combat
                 });
             }
 
-            _enemyStatuses.RemoveAll(x => x == null);
-            _playerStatuses.RemoveAll(x => x == null);
+            RemoveDeletedEnemies();
 
             if (_enemyStatuses.Count == 0)
             {
@@ -211,6 +238,9 @@ namespace Combat
                 // theres only attack now
                 var attack = new EnemyAttackAction();
                 attack.Execute(_enemyStatuses, _playerStatuses, status);
+
+                UpdateHud();
+
                 yield return new WaitForSeconds(EnemyTurnDelay);
             }
 
@@ -223,6 +253,22 @@ namespace Combat
             {
                 playerStatus.StopDefend();
             }
+        }
+
+        private void RemoveDeletedEnemies()
+        {
+            _enemyStatuses.RemoveAll(x => x == null);
+            _playerStatuses.RemoveAll(x => x == null);
+        }
+
+        private void UpdateHud()
+        {
+            RemoveDeletedEnemies();
+
+            if (_playerStatuses.Count == 0) return;
+
+            var playerStatus = _playerStatuses.First();
+            _playerHpText.text = $"{playerStatus.health}/{playerStatus.maxHealth}";
         }
     }
 }
