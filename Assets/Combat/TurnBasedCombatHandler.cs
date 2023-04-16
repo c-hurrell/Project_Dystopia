@@ -188,6 +188,13 @@ namespace Combat
             PlayerAct(PlayerActionType.Defend, _targetEnemy);
         }
 
+        public void PlayerRun()
+        {
+            if (_isEnemyTurn) return;
+            Debug.Log("Player ran away");
+            CombatManager.EndBattle();
+        }
+
         private bool _isEnemyTurn;
 
         /// <summary>
