@@ -5,6 +5,7 @@ namespace Combat
 {
     public class EnemyBattleStatus : MonoBehaviour
     {
+        public int maxHealth;
         public int health;
         public int attack;
         public int speed;

@@ -3455,7 +3455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
       propertyPath: enemyInfo.maxAttack
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
       propertyPath: enemyInfo.maxHealth
@@ -3468,6 +3468,10 @@ PrefabInstance:
     - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
       propertyPath: enemyInfo.minHealth
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797764978236919480, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
+      propertyPath: enemyInfo.enemyCount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7797764978236919482, guid: 7ee811e678a07062694846b06d8ff0b6, type: 3}
       propertyPath: m_RootOrder

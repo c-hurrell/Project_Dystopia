@@ -5,7 +5,7 @@ using System.Linq;
 using Enemy;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UI;
 using World;
 using Random = UnityEngine.Random;
 
@@ -20,10 +20,11 @@ namespace Combat
 
         [SerializeField] private GameObject enemyHudPrefab;
 
-        [FormerlySerializedAs("enemyHudContainer")] [SerializeField]
-        private GameObject combatHudContainer;
+        [SerializeField] private GameObject combatHudContainer;
 
         private TextMeshProUGUI _playerHpText;
+        private readonly List<TextMeshProUGUI> _enemyHpTexts = new();
+        private readonly List<GameObject> _enemyHuds = new();
 
         private readonly List<EnemyBattleStatus> _enemyStatuses = new();
         private List<PlayerBattleStatus> _playerStatuses = new();
@@ -98,6 +99,7 @@ namespace Combat
                 status.health = Random.Range(currentEncounter.minHealth, currentEncounter.maxHealth + 1);
                 status.attack = Random.Range(currentEncounter.minAttack, currentEncounter.maxAttack + 1);
                 status.speed = Random.Range(currentEncounter.minSpeed, currentEncounter.maxSpeed + 1);
+                status.maxHealth = status.health;
 
                 _enemyStatuses.Add(status);
             }
@@ -131,6 +133,34 @@ namespace Combat
             {
                 _playerHpText = combatHudContainer.transform.Find("PlayerHPEP").Find("Health")
                     .GetComponent<TextMeshProUGUI>();
+            }
+
+            for (var i = 0; i < currentEncounter.enemyCount; i++)
+            {
+                var enemyHudStatus = Instantiate(enemyHudPrefab, combatHudContainer.transform);
+                var enemyTransform = enemyHudStatus.transform;
+                var pos = enemyTransform.localPosition;
+
+                // -18 each offset
+                enemyTransform.localPosition = new(
+                    pos.x,
+                    pos.y - i * 18,
+                    pos.z
+                );
+
+                var enemyIndex = enemyTransform.Find("EnemyIndex");
+                enemyIndex.GetComponent<TextMeshProUGUI>().text = (i + 1).ToString();
+
+                var button = enemyTransform.Find("Enemy1Button").GetComponent<Button>();
+                var targetEnemy = i;
+                button.onClick.AddListener(() =>
+                {
+                    Debug.Log("Player targeting enemy " + targetEnemy);
+                    _targetEnemy = targetEnemy;
+                });
+
+                _enemyHpTexts.Add(enemyTransform.Find("EnemyHealth").GetComponent<TextMeshProUGUI>());
+                _enemyHuds.Add(enemyHudStatus);
             }
 
             UpdateHud();
@@ -239,7 +269,7 @@ namespace Combat
                 var attack = new EnemyAttackAction();
                 attack.Execute(_enemyStatuses, _playerStatuses, status);
 
-                UpdateHud();
+                RemoveDeletedEnemies();
 
                 yield return new WaitForSeconds(EnemyTurnDelay);
             }
@@ -259,16 +289,36 @@ namespace Combat
         {
             _enemyStatuses.RemoveAll(x => x == null);
             _playerStatuses.RemoveAll(x => x == null);
+
+            for (var i = 0; i < _enemyHuds.Count; i++)
+            {
+                var enemyHud = _enemyHuds[i];
+                if (i > _enemyStatuses.Count - 1)
+                {
+                    Destroy(enemyHud);
+                }
+            }
+
+            var removeRangeIndex = _enemyStatuses.Count;
+            _enemyHuds.RemoveRange(removeRangeIndex, _enemyHuds.Count - removeRangeIndex);
+            _enemyHpTexts.RemoveRange(removeRangeIndex, _enemyHpTexts.Count - removeRangeIndex);
+
+            UpdateHud();
         }
 
         private void UpdateHud()
         {
-            RemoveDeletedEnemies();
-
             if (_playerStatuses.Count == 0) return;
 
             var playerStatus = _playerStatuses.First();
             _playerHpText.text = $"{playerStatus.health}/{playerStatus.maxHealth}";
+
+            for (var i = 0; i < _enemyHpTexts.Count; i++)
+            {
+                var enemyStatus = _enemyStatuses[i];
+                var health = Math.Max(enemyStatus.health, 0);
+                _enemyHpTexts[i].text = $"{health}/{enemyStatus.maxHealth}";
+            }
         }
     }
 }
