@@ -1243,7 +1243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1634619332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,7 +1357,7 @@ PrefabInstance:
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: combatHudContainer
       value: 
-      objectReference: {fileID: 634662569}
+      objectReference: {fileID: 682393152}
     - target: {fileID: 1476948084647554099, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: m_Name
       value: CombatManagerScript
