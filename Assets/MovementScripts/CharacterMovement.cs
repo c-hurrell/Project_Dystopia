@@ -1,3 +1,4 @@
+using Combat;
 using UnityEngine;
 
 namespace MovementScripts
@@ -31,11 +32,13 @@ namespace MovementScripts
 
         private void Update()
         {
+            if (CombatManager.IsInCombat) return;
             ProcessInput();
         }
 
         private void FixedUpdate()
         {
+            if (CombatManager.IsInCombat) return;
             Move();
         }
     }

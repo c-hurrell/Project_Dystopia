@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Combat;
 using UnityEngine;
 using UnityEngine.UI;
 using Stat_Classes;
@@ -42,6 +43,10 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
+        if (CombatManager.IsInCombat) {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventoryUI();

@@ -21,13 +21,20 @@ public class Character : MonoBehaviour
     private double hp = 50, ep = 30, baseAttack = 20, baseDefence = 20, baseSpeed = 20;
     // Character Actual Stats
     [Header("Character Stats")] [SerializeField]
-    public double hitpoints, energypoints, attack, defence, speed; 
+    public double hitpoints;
+    public double currentHp;
+    public double energypoints;
+    // energypoints are currently a scrapped feature
+    public double attack;
+    public double defence;
+    public double speed; 
+    // hitpoints is max HP
     // #Notes for the player these will be calculated but for enemies these will be hand made potentially - or would be decided for bosses only etc.
 
-    public List<skill> currentSkills;
+    //public List<skill> currentSkills;
 
     // Possible removal unsure currently
-    public int xp;
+    //public int xp;
 
     // PARTS SECTION POST PARTS CLASS CREATION
     [Header("Character Parts")]
@@ -88,13 +95,13 @@ public class Character : MonoBehaviour
                 break;
         }
     }
-    public void PartSkillAdd()
-    {
-        currentSkills.Add(headPart._partSkill);
-        currentSkills.Add(armsPart._partSkill);
-        currentSkills.Add(chestPart._partSkill);
-        currentSkills.Add(legsPart._partSkill);
-    }
+    // public void PartSkillAdd()
+    // {
+    //     currentSkills.Add(headPart._partSkill);
+    //     currentSkills.Add(armsPart._partSkill);
+    //     currentSkills.Add(chestPart._partSkill);
+    //     currentSkills.Add(legsPart._partSkill);
+    // }
     
     
     
