@@ -96,6 +96,7 @@ namespace Dialog
         private IEnumerator DialogCoroutine()
         {
             const float charDelay = 0.05f;
+            const int maxCharsPerLine = 40;
             var dialogsQueue = new Queue<string>(dialogs);
 
             yield return new WaitForSeconds(0.5f);
@@ -103,13 +104,37 @@ namespace Dialog
             while (dialogsQueue.Count > 0)
             {
                 var currentDialog = dialogsQueue.Dequeue();
+                // remove newlines
+                currentDialog = currentDialog.Replace("\n", " ");
+
                 _text.text = "";
 
                 var fastForward = false;
                 var fastForwardWaitForNoInput = Input.anyKeyDown;
+                var waitingForSpace = false;
+                var splitWait = maxCharsPerLine;
                 foreach (var c in currentDialog)
                 {
                     _text.text += c;
+                    splitWait--;
+
+                    // wait for space to split by words
+                    if (waitingForSpace && c == ' ')
+                    {
+                        waitingForSpace = false;
+                        splitWait = maxCharsPerLine;
+                        _text.text += "\n";
+                    }
+
+                    if (splitWait == 0)
+                    {
+                        waitingForSpace = true;
+                    }
+
+                    if (fastForward)
+                    {
+                        continue;
+                    }
 
                     var waitTime = charDelay;
                     while (waitTime > 0f)
@@ -129,24 +154,15 @@ namespace Dialog
 
                         yield return null;
                     }
-
-                    if (fastForward)
-                    {
-                        break;
-                    }
                 }
 
                 if (fastForward)
                 {
-                    _text.text = currentDialog;
-                    yield return new WaitUntil(() => !Input.anyKeyDown);
+                    yield return new WaitWhile(() => Input.anyKeyDown);
                 }
 
                 // wait for user input
-                while (!Input.anyKeyDown)
-                {
-                    yield return null;
-                }
+                yield return new WaitUntil(() => Input.anyKeyDown);
             }
 
             yield return new WaitForSeconds(0.1f);
