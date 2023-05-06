@@ -79,12 +79,13 @@ namespace Dialog
 
             var (x, y) = position switch
             {
-                DialogPosition.TopMiddle => (0, _baseHeight / 2 + offsetFromEdge),
+                DialogPosition.TopMiddle => (0, -(_baseHeight / 2f + offsetFromEdge)),
                 _ => throw new ArgumentOutOfRangeException()
             };
 
             // set position
-            dialogBase.localPosition = new(x, y, 0);
+            var baseRect = dialogBase.GetComponent<RectTransform>();
+            baseRect.anchoredPosition = new(x, y);
         }
     }
 }
