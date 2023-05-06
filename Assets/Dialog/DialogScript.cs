@@ -47,7 +47,7 @@ namespace Dialog
                 const float imageWidthRatioToBase = 1f;
                 const float imageHeightRatioToBase = 1f;
 
-                const float textWidthRatioToBase = 1f;
+                const float textWidthRatioToBase = 0.948616600791f;
                 const float textHeightRatioToBase = 0.83870967742f;
 
                 if (Screen.width > Screen.height)
