@@ -62,10 +62,10 @@ namespace Dialog
                 }
 
                 _imageWidth = _baseWidth * imageWidthRatioToBase;
-                _imageHeight = _imageWidth * imageHeightRatioToBase;
+                _imageHeight = _baseHeight * imageHeightRatioToBase;
 
                 _textWidth = _baseWidth * textWidthRatioToBase;
-                _textHeight = _textWidth * textHeightRatioToBase;
+                _textHeight = _baseHeight * textHeightRatioToBase;
 
                 _alreadyCached = true;
             }
