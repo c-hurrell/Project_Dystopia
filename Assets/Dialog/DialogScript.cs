@@ -22,8 +22,6 @@ namespace Dialog
         private static bool _alreadyCached;
         private static float _baseWidth;
         private static float _baseHeight;
-        private static float _imageWidth;
-        private static float _imageHeight;
         private static float _textWidth;
         private static float _textHeight;
 
@@ -37,12 +35,14 @@ namespace Dialog
             var dialogBase = transform.Find("Canvas").Find("DialogBase");
             var bg = dialogBase.Find("DialogBG");
             var text = dialogBase.Find("DialogText");
+            var pressToContinueText = dialogBase.Find("PressToContinueText");
 
             _text = text.GetComponent<TextMeshProUGUI>();
 
             // handle size
             var textRect = text.GetComponent<RectTransform>();
             var bgRect = bg.GetComponent<RectTransform>();
+            var pressToContinueTextRect = pressToContinueText.GetComponent<RectTransform>();
 
             // calculate size
             if (!_alreadyCached)
@@ -50,9 +50,6 @@ namespace Dialog
                 // size settings
                 const float baseRatioToScreen = 1 / 1.5f;
                 const float baseHeightRatio = 1 / 5f;
-
-                const float imageWidthRatioToBase = 1f;
-                const float imageHeightRatioToBase = 1f;
 
                 const float textWidthRatioToBase = 0.948616600791f;
                 const float textHeightRatioToBase = 0.83870967742f;
@@ -68,9 +65,6 @@ namespace Dialog
                     _baseWidth = _baseHeight / baseHeightRatio;
                 }
 
-                _imageWidth = _baseWidth * imageWidthRatioToBase;
-                _imageHeight = _baseHeight * imageHeightRatioToBase;
-
                 _textWidth = _baseWidth * textWidthRatioToBase;
                 _textHeight = _baseHeight * textHeightRatioToBase;
 
@@ -78,8 +72,9 @@ namespace Dialog
             }
 
             // set size
-            bgRect.sizeDelta = new(_imageWidth, _imageHeight);
+            bgRect.sizeDelta = new(_baseWidth, _baseHeight);
             textRect.sizeDelta = new(_textWidth, _textHeight);
+            pressToContinueTextRect.sizeDelta = new(_textWidth, _textHeight);
 
             // position calculation
             const float offsetFromEdge = 10f;
