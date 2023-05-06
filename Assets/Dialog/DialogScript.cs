@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Dialog
@@ -12,6 +15,8 @@ namespace Dialog
     {
         public string[] dialogs;
         public DialogPosition position;
+
+        private TextMeshProUGUI _text;
 
         // cached values
         private static bool _alreadyCached;
@@ -32,6 +37,8 @@ namespace Dialog
             var dialogBase = transform.Find("Canvas").Find("DialogBase");
             var bg = dialogBase.Find("DialogBG");
             var text = dialogBase.Find("DialogText");
+
+            _text = text.GetComponent<TextMeshProUGUI>();
 
             // handle size
             var textRect = text.GetComponent<RectTransform>();
@@ -86,6 +93,72 @@ namespace Dialog
             // set position
             var baseRect = dialogBase.GetComponent<RectTransform>();
             baseRect.anchoredPosition = new(x, y);
+
+            // start dialog coroutine
+            StartCoroutine(DialogCoroutine());
+        }
+
+        private IEnumerator DialogCoroutine()
+        {
+            const float charDelay = 0.05f;
+            var dialogsQueue = new Queue<string>(dialogs);
+
+            yield return new WaitForSeconds(0.5f);
+
+            while (dialogsQueue.Count > 0)
+            {
+                var currentDialog = dialogsQueue.Dequeue();
+                _text.text = "";
+
+                var fastForward = false;
+                var fastForwardWaitForNoInput = Input.anyKeyDown;
+                foreach (var c in currentDialog)
+                {
+                    _text.text += c;
+
+                    var waitTime = charDelay;
+                    while (waitTime > 0f)
+                    {
+                        waitTime -= Time.deltaTime;
+
+                        if (!Input.anyKeyDown)
+                        {
+                            fastForwardWaitForNoInput = false;
+                            Debug.Log("fast forward wait for no input");
+                        }
+
+                        if (!fastForwardWaitForNoInput && Input.anyKeyDown)
+                        {
+                            fastForward = true;
+                            Debug.Log("fast forward");
+                            break;
+                        }
+
+                        yield return null;
+                    }
+
+                    if (fastForward)
+                    {
+                        break;
+                    }
+                }
+
+                if (fastForward)
+                {
+                    _text.text = currentDialog;
+                    yield return new WaitUntil(() => !Input.anyKeyDown);
+                }
+
+                // wait for user input
+                while (!Input.anyKeyDown)
+                {
+                    yield return null;
+                }
+            }
+
+            yield return new WaitForSeconds(0.1f);
+
+            Destroy(gameObject);
         }
     }
 }
