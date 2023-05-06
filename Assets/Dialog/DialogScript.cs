@@ -25,6 +25,8 @@ namespace Dialog
         private static float _textWidth;
         private static float _textHeight;
 
+        public Action OnDialogEnd;
+
         private void Start()
         {
             if (dialogs == null || dialogs.Length == 0)
@@ -167,6 +169,7 @@ namespace Dialog
 
             yield return new WaitForSeconds(0.1f);
 
+            OnDialogEnd?.Invoke();
             Destroy(gameObject);
         }
     }
