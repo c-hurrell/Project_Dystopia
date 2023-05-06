@@ -124,13 +124,11 @@ namespace Dialog
                         if (!Input.anyKeyDown)
                         {
                             fastForwardWaitForNoInput = false;
-                            Debug.Log("fast forward wait for no input");
                         }
 
                         if (!fastForwardWaitForNoInput && Input.anyKeyDown)
                         {
                             fastForward = true;
-                            Debug.Log("fast forward");
                             break;
                         }
 
