@@ -59,6 +59,7 @@ namespace Stat_Classes
                     Debug.Log(" > Error: Part doesn't have a type");
                     break;
             }
+            StatTotals();
             UpdateUI();
         }
         public void UpdateUI()
