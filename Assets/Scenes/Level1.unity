@@ -2691,8 +2691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 1374001295}
   player: {fileID: 1148569805}
-  minBound: {x: 0, y: 0}
-  maxBound: {x: 0, y: 0}
+  minBound: {x: -16, y: -20}
+  maxBound: {x: 16, y: 20}
 --- !u!1 &1153491103
 GameObject:
   m_ObjectHideFlags: 0
