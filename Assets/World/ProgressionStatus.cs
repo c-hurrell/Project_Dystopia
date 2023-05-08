@@ -10,6 +10,10 @@ namespace World
 
     public enum Area
     {
-        Default
+        Default,
+        Level1,
+        Level2,
+        Level3,
+        Level4
     }
 }
