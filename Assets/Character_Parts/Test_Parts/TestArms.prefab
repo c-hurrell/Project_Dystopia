@@ -104,6 +104,6 @@ MonoBehaviour:
   partType: 1
   _partLvl: 1
   _statType: 0
-  _statVal: 0
+  _statVal: 11
   _statBaseVal: 10
   _partSkill: {fileID: 0}

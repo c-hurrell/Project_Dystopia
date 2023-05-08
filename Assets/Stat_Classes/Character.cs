@@ -65,6 +65,10 @@ public class Character : MonoBehaviour
     // Calculates the totals for each part
     public void StatTotals()
     {
+        attack = baseAttack;
+        defence = baseDefence;
+        hitpoints = hp;
+        speed = baseSpeed;
         PartStatCalc(armsPart); 
         PartStatCalc(chestPart);
         PartStatCalc(headPart);
@@ -76,19 +80,19 @@ public class Character : MonoBehaviour
         switch (part._statType)
         {
             case Part.StatType.Attack:
-                attack = baseAttack + part._statVal;
+                attack += part._statVal;
                 break;
             case Part.StatType.Defence:
-                defence = baseDefence + part._statVal;
+                defence += part._statVal;
                 break;
             case Part.StatType.Ep:
-                energypoints = ep + part._statVal;
+                energypoints += part._statVal;
                 break;
             case Part.StatType.Hp:
-                hitpoints = hp + part._statVal;
+                hitpoints += part._statVal;
                 break;
             case Part.StatType.Speed:
-                speed = baseSpeed + part._statVal;
+                speed += part._statVal;
                 break;
             default:
                 Debug.Log(" > Error: Part must have a stat type");
