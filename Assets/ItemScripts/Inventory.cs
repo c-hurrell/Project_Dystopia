@@ -94,48 +94,6 @@ public class Inventory : MonoBehaviour
             itemSlots[i].SetActive(false);
         }
     }
-    // Equips a part to the player
-    // public void EquipPart(int partSlot)
-    // {
-    //     Debug.Log(partSlot);
-    //     var part = TestParts[partSlot].GetComponent<Part>(); 
-    //     Debug.Log("EquipPart: " + part.name);
-    //     switch (part.partType)
-    //     {
-    //         case Part.PartType.Head:
-    //             Debug.Log("Head");
-    //             // Removes Part at this location
-    //             RemovePart(partSlot);
-    //             // Takes in GameObject
-    //             //AddPart(playerChar.head);
-    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
-    //             headSlot.image.sprite = part.sprite;
-    //             break;
-    //         case Part.PartType.Arms:
-    //             RemovePart(partSlot);
-    //             //AddPart(playerChar.arms);
-    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
-    //             armsSlot.image.sprite = part.sprite;
-    //             break;
-    //         case Part.PartType.Chest:
-    //             RemovePart(partSlot);
-    //             //AddPart(playerChar.chest);
-    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
-    //             chestSlot.image.sprite = part.sprite;
-    //             break;
-    //         case Part.PartType.Legs:
-    //             RemovePart(partSlot);
-    //             //AddPart(playerChar.legs);
-    //             TestParts.Add(playerChar.ChangePart(TestParts[partSlot]));
-    //             legsSlot.image.sprite = part.sprite;
-    //             break;
-    //         default:
-    //             Debug.Log(" > Error: Part should have a type!");
-    //             break;
-    //     }
-    //     SortPartList();
-    //     
-    // }
     public void EquipPart(int partSlot)
     {
         // Get the Part component of the inventory item
