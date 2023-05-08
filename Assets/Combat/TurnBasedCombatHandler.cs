@@ -22,6 +22,8 @@ namespace Combat
 
         [SerializeField] private GameObject combatHudContainer;
 
+        [SerializeField] private GameObject enemyContainer;
+
         private TextMeshProUGUI _playerHpText;
         private readonly List<TextMeshProUGUI> _enemyHpTexts = new();
         private readonly List<GameObject> _enemyHuds = new();
@@ -81,18 +83,24 @@ namespace Combat
 
             var currentEncounter = CombatManager.CurrentEncounter;
 
+            // For each enemy in encounter
             for (var i = 0; i < currentEncounter.enemyCount; i++)
             {
                 var enemyTypeIndex = (int)currentEncounter.enemyType;
                 GameObject enemy;
-                if (enemyTypeIndex >= enemyPrefabs.Length)
+                // Checks if enemy prefabs are present
+                if (enemyTypeIndex >= enemyPrefabs.Length) // in test case type = 1 lenght is 2? 
                 {
                     Debug.LogWarning($"Enemy type {currentEncounter.enemyType} is not assigned to a prefab");
                     enemy = new();
                 }
                 else
                 {
+                    // If present add enemy
                     enemy = Instantiate(enemyPrefabs[(int)currentEncounter.enemyType]);
+                    // Added by C-Hurrell
+                    enemyContainer.GetComponent<SpriteRenderer>().sprite = enemy.GetComponent<SpriteRenderer>().sprite;
+                    //
                 }
 
                 var status = enemy.AddComponent<EnemyBattleStatus>();
