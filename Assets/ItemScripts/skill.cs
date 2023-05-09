@@ -11,7 +11,7 @@ public class skill : MonoBehaviour
     [SerializeField]public string skillDes;
     [Space]
     [Header("Effects")]
-    [SerializeField]public float damageMod;
+    [SerializeField]public double damageMod;
     [SerializeField]public damageTypes damageType;
     [SerializeField]public debuffs debuff;
     [SerializeField]public string debuffTurns;
