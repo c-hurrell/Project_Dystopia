@@ -100,6 +100,7 @@ namespace Combat
                     enemy = Instantiate(enemyPrefabs[(int)currentEncounter.enemyType]);
                     // Added by C-Hurrell
                     enemyContainer.GetComponent<SpriteRenderer>().sprite = enemy.GetComponent<SpriteRenderer>().sprite;
+                    enemyContainer.GetComponent<SpriteRenderer>().color = enemy.GetComponent<SpriteRenderer>().color;
                     //
                 }
 
