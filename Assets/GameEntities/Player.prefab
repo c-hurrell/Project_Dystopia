@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6391019278804072397}
   - component: {fileID: 8424726006511114992}
   - component: {fileID: 7430171446391951786}
+  - component: {fileID: 2210314825085613852}
+  - component: {fileID: 8233681200655530950}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -76,8 +78,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -1287672737, guid: 0fbe5073763995343bf33d0d5788befa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affceafde0264d3ba9d4c465a1a48e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2210314825085613852}
   speed: 5
 --- !u!70 &8424726006511114992
 CapsuleCollider2D:
@@ -153,16 +156,62 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   id: 0
   characterName: 
+  hp: 50
+  ep: 30
+  baseAttack: 20
+  baseDefence: 20
+  baseSpeed: 20
   hitpoints: 0
+  currentHp: 0
   energypoints: 0
   attack: 0
   defence: 0
   speed: 0
-  currentSkills: []
-  xp: 0
   armsPart: {fileID: 0}
   chestPart: {fileID: 0}
   headPart: {fileID: 0}
   legsPart: {fileID: 0}
-  powerCore: {fileID: 0}
-  inventory: {fileID: 0}
+  arms: {fileID: 0}
+  chest: {fileID: 0}
+  head: {fileID: 0}
+  legs: {fileID: 0}
+  headUI: {fileID: 0}
+  chestUI: {fileID: 0}
+  armsUI: {fileID: 0}
+  legsUI: {fileID: 0}
+--- !u!95 &2210314825085613852
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549517350533410311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 286fdb20dcbf7bf4eb48527893d4a49e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8233681200655530950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549517350533410311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b052c088687bfaf4d81f276faf8b6151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  player: {fileID: 4549517350533410311}
+  minBound: {x: -16, y: -20}
+  maxBound: {x: 16, y: 20}
