@@ -787,12 +787,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bigmainhero_29: -204423288
-      bigmainhero_22: -1955216929
-      bigmainhero_27: 2012379443
       bigmainhero_30: -2110413917
+      bigmainhero_27: 2012379443
+      bigmainhero_4: -61811644
       bigmainhero_14: -397354917
       bigmainhero_12: -765972069
+      bigmainhero_8: 1500373196
       bigmainhero_1: -1287672737
       bigmainhero_25: -1397282492
       bigmainhero_17: -702301176
@@ -813,11 +813,11 @@ TextureImporter:
       bigmainhero_31: 636714827
       bigmainhero_2: 877139792
       bigmainhero_18: -878426858
-      bigmainhero_7: -584600881
-      bigmainhero_0: -1432346017
-      bigmainhero_4: -61811644
       bigmainhero_28: -2076832977
-      bigmainhero_8: 1500373196
+      bigmainhero_29: -204423288
+      bigmainhero_0: -1432346017
+      bigmainhero_7: -584600881
+      bigmainhero_22: -1955216929
       bigmainhero_9: 1973243481
   spritePackingTag: 
   pSDRemoveMatte: 0
