@@ -3,6 +3,9 @@ namespace Enemy
     public enum EnemyType
     {
         Test,
-        YellowBot
+        YellowBot,
+        BlueBot,
+        RedBot,
+        PurpleBot
     }
 }

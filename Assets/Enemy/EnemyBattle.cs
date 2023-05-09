@@ -8,6 +8,9 @@ namespace Enemy
     {
         [SerializeField] private Collider2D trigger;
         [SerializeField] private EncounterData enemyInfo;
+        
+        // Addition by C-Hurrell
+        [SerializeField] private GameObject self;
 
         private void Start()
         {
@@ -23,7 +26,8 @@ namespace Enemy
             {
                 Debug.Log("Player entered battle trigger");
                 CombatManager.StartCombat(enemyInfo);
-                Destroy(this);
+                Destroy(self);
+                //Destroy(this);
             }
         }
     }
