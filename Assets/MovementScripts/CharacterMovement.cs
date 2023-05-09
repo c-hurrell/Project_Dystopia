@@ -1,10 +1,12 @@
 using Combat;
 using UnityEngine;
 
+
 namespace MovementScripts
 {
     public class CharacterMovement : MonoBehaviour
     {
+        public Animator animator;
         private Vector2 _inputDirection;
         private Rigidbody2D _rigidbody;
         [SerializeField] private float speed = 5f;
@@ -34,6 +36,39 @@ namespace MovementScripts
         {
             if (CombatManager.IsInCombat) return;
             ProcessInput();
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                animator.SetBool("South", true);
+            }
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                animator.SetBool("South", false);
+            }
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                animator.SetBool("North", true);
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                animator.SetBool("North", false);
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                animator.SetBool("West", true);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                animator.SetBool("West", false);
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                animator.SetBool("East", true);
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                animator.SetBool("East", false);
+            }
         }
 
         private void FixedUpdate()
