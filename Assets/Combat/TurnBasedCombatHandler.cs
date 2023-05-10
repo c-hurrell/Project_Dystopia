@@ -240,7 +240,7 @@ namespace Combat
         {
             if (_isEnemyTurn) return;
             Debug.Log("Player ran away");
-            CombatManager.EndBattle();
+            CombatManager.EndBattle(EndBattleStatus.Normal, _playerStatuses);
         }
 
         private bool _isEnemyTurn;
@@ -305,14 +305,14 @@ namespace Combat
             if (_enemyStatuses.Count == 0)
             {
                 Debug.Log("Player won");
-                CombatManager.EndBattle();
+                CombatManager.EndBattle(EndBattleStatus.Normal, _playerStatuses);
                 yield break;
             }
 
             if (_playerStatuses.Count == 0)
             {
                 Debug.Log("Player lost");
-                CombatManager.EndBattle(EndBattleStatus.GameOver);
+                CombatManager.EndBattle(EndBattleStatus.GameOver, _playerStatuses);
             }
         }
 
