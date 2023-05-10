@@ -1,7 +1,7 @@
+using System.Collections.Generic;
 using Enemy;
 using SceneHandler;
-using UnityEditor;
-using UnityEngine;
+using World;
 
 namespace Combat
 {
@@ -17,15 +17,22 @@ namespace Combat
             GlobalSceneHandler.LoadScene(Scene.EnemyBattle);
         }
 
-        public static void EndBattle(EndBattleStatus status = EndBattleStatus.Normal)
+        public static void EndBattle(EndBattleStatus status, List<PlayerBattleStatus> playerStatuses)
         {
+            for (var i = 0; i < ProgressionStatus.PartyMembers.Count; i++)
+            {
+                var partyStatus = ProgressionStatus.PartyMembers[i];
+                var playerStatus = playerStatuses[i];
+
+                partyStatus.CopyFrom(playerStatus);
+            }
+
             IsInCombat = false;
             CurrentEncounter = null;
             GlobalSceneHandler.UnloadScene(Scene.EnemyBattle);
 
             if (status == EndBattleStatus.GameOver)
             {
-                
                 GlobalSceneHandler.LoadScene(Scene.GameOver);
             }
         }
