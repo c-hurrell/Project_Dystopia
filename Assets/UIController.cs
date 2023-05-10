@@ -49,7 +49,7 @@ public class UIController : MonoBehaviour
     
     public void Quit()
     {
-        //SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
     #endregion
     
