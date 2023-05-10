@@ -191,7 +191,7 @@ namespace Combat
 
             if (playerAction is AttackAction)
             {
-                PlayerAttackEffect();
+                PlayerAttackEffect(_playerStatuses[_turnIndex].attack);
             }
 
             UpdateHud();
@@ -204,7 +204,7 @@ namespace Combat
             }
         }
 
-        private void PlayerAttackEffect()
+        private void PlayerAttackEffect(int damage)
         {
         }
 
