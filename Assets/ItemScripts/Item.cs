@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Item : MonoBehaviour
@@ -14,6 +15,12 @@ public class Item : MonoBehaviour
     public virtual void UseItem()
     {
         // Implement the use of the item here
+    }
+    private void Start()
+    {
+        Vector3 hideSelf = new Vector3(0, 0, 10);
+        gameObject.transform.position = hideSelf;
+        DontDestroyOnLoad(this);
     }
 
 }

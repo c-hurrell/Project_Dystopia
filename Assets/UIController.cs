@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -49,6 +50,8 @@ public class UIController : MonoBehaviour
     
     public void Quit()
     {
+        Time.timeScale = 1;
+        Destroy(GameObject.FindWithTag("GameManager"));
         SceneManager.LoadScene("MainMenu");
     }
     #endregion

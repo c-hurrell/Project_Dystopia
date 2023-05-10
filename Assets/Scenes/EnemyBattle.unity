@@ -1807,7 +1807,7 @@ PrefabInstance:
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: damageIndicator
       value: 
-      objectReference: {fileID: 8646089849251186495, guid: c690eae8a9a7e064d9933e61fbaa4c6f, type: 3}
+      objectReference: {fileID: 3805297580550835829, guid: 3cecfc985a1d4b54496838448c1e77da, type: 3}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyHudContainer
       value: 
@@ -1818,11 +1818,11 @@ PrefabInstance:
       objectReference: {fileID: 682393152}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyPrefabs.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: dropPartPrefabs.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
@@ -1844,6 +1844,22 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 5358635701501875609, guid: f4483fcf7c226954f87dc3d343ccc173, type: 3}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: enemyPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 6293707601338430101, guid: 9e6f93a1acce3954e956ec81605e4b7f, type: 3}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: dropPartPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8376430687877762256, guid: b894d6a6b77fece4eb3a908c925014b9, type: 3}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: dropPartPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2591569810723072420, guid: 81cb70fd34fc3bf48ac2827753c2248b, type: 3}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: dropPartPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2712607613533971479, guid: dd5f5800d3c84624690fc43f7a4063d1, type: 3}
     - target: {fileID: 1476948084647554099, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: m_Name
       value: CombatManagerScript

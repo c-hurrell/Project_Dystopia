@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5421945280511150612, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421945280511150612, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421945280511150612, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -57,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5421945280511150614, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
       propertyPath: enemyInfo.maxAttack
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5421945280511150614, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
       propertyPath: enemyInfo.maxHealth
@@ -65,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5421945280511150614, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
       propertyPath: enemyInfo.minAttack
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5421945280511150614, guid: 3641b1f55f6cfdd4894555e3c565b1ab, type: 3}
       propertyPath: enemyInfo.minHealth
