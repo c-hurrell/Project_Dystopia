@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using Enemy;
 using TMPro;
@@ -23,6 +24,8 @@ namespace Combat
         [SerializeField] private GameObject combatHudContainer;
 
         [SerializeField] private GameObject enemyContainer;
+
+        [SerializeField] private GameObject damageIndicator;
 
         private TextMeshProUGUI _playerHpText;
         private readonly List<TextMeshProUGUI> _enemyHpTexts = new();
@@ -206,6 +209,11 @@ namespace Combat
 
         private void PlayerAttackEffect(int damage)
         {
+            Vector3 pos;
+            pos.x = 20;
+            pos.y = 20;
+            GameObject text = Instantiate(damageIndicator, pos);
+            text.GetComponent<TextMeshProUGUI>().text = damage.ToString();
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
