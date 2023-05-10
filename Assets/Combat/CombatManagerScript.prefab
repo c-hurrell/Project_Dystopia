@@ -50,6 +50,13 @@ MonoBehaviour:
   enemyHudPrefab: {fileID: 0}
   combatHudContainer: {fileID: 0}
   enemyContainer: {fileID: 0}
+  combatUI: {fileID: 0}
+  damageIndicator: {fileID: 0}
+  dropPartPrefabs:
+  - {fileID: 7668806170503111668, guid: b913b87d07937674993cc41d8ec6e158, type: 3}
+  - {fileID: 8376430687877762256, guid: b894d6a6b77fece4eb3a908c925014b9, type: 3}
+  - {fileID: 2712607613533971479, guid: dd5f5800d3c84624690fc43f7a4063d1, type: 3}
+  - {fileID: 2591569810723072420, guid: 81cb70fd34fc3bf48ac2827753c2248b, type: 3}
 --- !u!82 &3504395388937989153
 AudioSource:
   m_ObjectHideFlags: 0

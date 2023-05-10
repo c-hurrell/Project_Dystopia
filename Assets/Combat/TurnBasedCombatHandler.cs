@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using Enemy;
 using TMPro;
@@ -27,6 +26,10 @@ namespace Combat
 
         [SerializeField] private GameObject combatUI;
         [SerializeField] private GameObject damageIndicator;
+
+        [SerializeField] private GameObject[] dropPartPrefabs;
+
+        private Inventory _inventory;
 
         private TextMeshProUGUI _playerHpText;
         private readonly List<TextMeshProUGUI> _enemyHpTexts = new();
@@ -177,6 +180,17 @@ namespace Combat
             }
 
             UpdateHud();
+
+            _inventory = FindObjectOfType<Inventory>();
+            if (_inventory == null)
+            {
+                Debug.LogError("Inventory is null");
+            }
+
+            if (dropPartPrefabs == null)
+            {
+                Debug.LogError("u forgot to assign drop part prefabs");
+            }
         }
 
         /// <summary>
@@ -210,11 +224,8 @@ namespace Combat
 
         private void PlayerAttackEffect(int damage)
         {
-            GameObject text = Instantiate(damageIndicator);
-            text.transform.SetParent(combatUI.transform);
+            var text = Instantiate(damageIndicator, combatUI.transform, true);
             text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text = damage.ToString();
-
-            
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
@@ -244,7 +255,7 @@ namespace Combat
         {
             if (_isEnemyTurn) return;
             Debug.Log("Player ran away");
-            CombatManager.EndBattle();
+            CombatManager.EndBattle(EndBattleStatus.Normal, _playerStatuses);
         }
 
         private bool _isEnemyTurn;
@@ -308,16 +319,29 @@ namespace Combat
 
             if (_enemyStatuses.Count == 0)
             {
-                Debug.Log("Player won");
-                CombatManager.EndBattle();
+                PlayerVictory();
                 yield break;
             }
 
             if (_playerStatuses.Count == 0)
             {
                 Debug.Log("Player lost");
-                CombatManager.EndBattle(EndBattleStatus.GameOver);
+                CombatManager.EndBattle(EndBattleStatus.GameOver, _playerStatuses);
             }
+        }
+
+        private void PlayerVictory()
+        {
+            Debug.Log("Player won");
+            CombatManager.EndBattle(EndBattleStatus.Normal, _playerStatuses);
+
+            // inventory drop thingy
+            var dropPartPrefab = dropPartPrefabs[Random.Range(0, dropPartPrefabs.Length)];
+
+            Debug.Log("Dropped part: " + dropPartPrefab.name);
+
+            var dropPart = Instantiate(dropPartPrefab);
+            _inventory.AddPart(dropPart);
         }
 
         private void RemoveDeletedEnemies()

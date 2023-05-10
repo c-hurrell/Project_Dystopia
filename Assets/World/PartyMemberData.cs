@@ -1,6 +1,9 @@
+using Combat;
+using Utils;
+
 namespace World
 {
-    public class PartyMemberData
+    public class PartyMemberData : ICopyFrom<PlayerBattleStatus>
     {
         public MemberType MemberType { get; }
         public int Health { get; set; }
@@ -15,6 +18,14 @@ namespace World
             Health = maxHealth;
             Attack = attack;
             Speed = speed;
+        }
+
+        public void CopyFrom(PlayerBattleStatus other)
+        {
+            Health = other.health;
+            MaxHealth = other.maxHealth;
+            Attack = other.attack;
+            Speed = other.speed;
         }
     }
 
