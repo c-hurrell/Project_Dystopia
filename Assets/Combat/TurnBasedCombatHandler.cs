@@ -188,6 +188,12 @@ namespace Combat
             };
 
             playerAction.Execute(_enemyStatuses, _playerStatuses, _playerStatuses[_turnIndex]);
+
+            if (playerAction is AttackAction)
+            {
+                PlayerAttackEffect();
+            }
+
             UpdateHud();
 
             _turnIndex++;
@@ -196,6 +202,10 @@ namespace Combat
             {
                 StartCoroutine(WaitForDeathsAndEnemyTurn());
             }
+        }
+
+        private void PlayerAttackEffect()
+        {
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
