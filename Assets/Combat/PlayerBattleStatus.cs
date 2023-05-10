@@ -1,33 +1,34 @@
+using System;
 using System.Collections;
+using Stat_Classes;
 using UnityEngine;
 using Utils;
-using World;
 
 namespace Combat
 {
-    public class PlayerBattleStatus : MonoBehaviour, ICopyFrom<PartyMemberData>
+    public class PlayerBattleStatus : MonoBehaviour, ICopyFrom<Player_Character>
     {
-        public int health;
-        public int maxHealth;
-        public int attack;
-        public int speed;
+        public double health;
+        public double maxHealth;
+        public double attack;
+        public double speed;
         public bool defending;
         public bool dying;
 
-        public void CopyFrom(PartyMemberData other)
+        public void CopyFrom(Player_Character other)
         {
-            health = other.Health;
-            maxHealth = other.MaxHealth;
-            attack = other.Attack;
-            speed = other.Speed;
+            health = other.currentHp;
+            maxHealth = other.hp;
+            attack = other.attack;
+            speed = other.speed;
         }
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(double damage)
         {
             if (defending)
             {
                 damage /= 2;
-                damage = Mathf.Max(damage, 1);
+                damage = Math.Max(damage, 1);
             }
 
             health -= damage;
