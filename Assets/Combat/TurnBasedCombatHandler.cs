@@ -208,6 +208,10 @@ namespace Combat
         public void PlayerAttack()
         {
             if (_isEnemyTurn) return;
+            // Added by C-Hurrell
+            // Plays the hit audio
+            GetComponent<AudioSource>().Play();
+            //
             PlayerAct(PlayerActionType.Attack, _targetEnemy);
         }
 
