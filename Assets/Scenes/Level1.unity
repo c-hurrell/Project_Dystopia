@@ -7773,6 +7773,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
+      propertyPath: ep
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: id
       value: 1
       objectReference: {fileID: 0}
@@ -7825,6 +7829,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4780572825178928425, guid: 1cd27b91d9846374196998375508122b, type: 3}
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
+      propertyPath: baseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: chestPart
       value: 
       objectReference: {fileID: 5012025810771302365, guid: ee228a1e7908b204995b3f0d17a658ac, type: 3}
@@ -7835,6 +7843,14 @@ PrefabInstance:
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: hitpoints
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
+      propertyPath: baseAttack
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
+      propertyPath: baseDefence
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: gameManager
