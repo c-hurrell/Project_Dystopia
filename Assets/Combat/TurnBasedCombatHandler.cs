@@ -27,6 +27,10 @@ namespace Combat
         [SerializeField] private GameObject combatUI;
         [SerializeField] private GameObject damageIndicator;
 
+        [SerializeField] private GameObject[] dropPartPrefabs;
+
+        private Inventory _inventory;
+
         private TextMeshProUGUI _playerHpText;
         private readonly List<TextMeshProUGUI> _enemyHpTexts = new();
         private readonly List<GameObject> _enemyHuds = new();
@@ -176,6 +180,17 @@ namespace Combat
             }
 
             UpdateHud();
+
+            _inventory = FindObjectOfType<Inventory>();
+            if (_inventory == null)
+            {
+                Debug.LogError("Inventory is null");
+            }
+
+            if (dropPartPrefabs == null)
+            {
+                Debug.LogError("u forgot to assign drop part prefabs");
+            }
         }
 
         /// <summary>
@@ -304,8 +319,7 @@ namespace Combat
 
             if (_enemyStatuses.Count == 0)
             {
-                Debug.Log("Player won");
-                CombatManager.EndBattle(EndBattleStatus.Normal, _playerStatuses);
+                PlayerVictory();
                 yield break;
             }
 
@@ -314,6 +328,20 @@ namespace Combat
                 Debug.Log("Player lost");
                 CombatManager.EndBattle(EndBattleStatus.GameOver, _playerStatuses);
             }
+        }
+
+        private void PlayerVictory()
+        {
+            Debug.Log("Player won");
+            CombatManager.EndBattle(EndBattleStatus.Normal, _playerStatuses);
+
+            // inventory drop thingy
+            var dropPartPrefab = dropPartPrefabs[Random.Range(0, dropPartPrefabs.Length)];
+
+            Debug.Log("Dropped part: " + dropPartPrefab.name);
+
+            var dropPart = Instantiate(dropPartPrefab);
+            _inventory.AddPart(dropPart);
         }
 
         private void RemoveDeletedEnemies()
