@@ -5,14 +5,14 @@ namespace Combat
 {
     public class EnemyBattleStatus : MonoBehaviour
     {
-        public int maxHealth;
-        public int health;
-        public int attack;
-        public int speed;
+        public double maxHealth;
+        public double health;
+        public double attack;
+        public double speed;
 
         public bool dying;
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(double damage)
         {
             health -= damage;
             Debug.Log("Enemy took damage " + damage + " and health is now " + health);

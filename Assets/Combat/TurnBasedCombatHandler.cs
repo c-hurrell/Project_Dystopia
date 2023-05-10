@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Enemy;
+using Stat_Classes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using World;
 using Random = UnityEngine.Random;
 
 namespace Combat
@@ -61,30 +62,13 @@ namespace Combat
                 Debug.LogWarning("Enemy prefabs are null or not all enemy types are assigned");
             }
 
-            if (playerPrefabs.Length < ProgressionStatus.PartyMembers.Count)
-            {
-                Debug.LogWarning("Player prefabs are null or not all party members are assigned");
-            }
+            var playerCharacter = FindObjectOfType<Player_Character>();
 
-            foreach (var partyMember in ProgressionStatus.PartyMembers)
-            {
-                var memberTypeIndex = (int)partyMember.MemberType;
-                GameObject player;
-                if (memberTypeIndex >= playerPrefabs.Length)
-                {
-                    Debug.LogWarning($"Party member {partyMember.MemberType} is not assigned to a prefab");
-                    player = new();
-                }
-                else
-                {
-                    player = Instantiate(playerPrefabs[(int)partyMember.MemberType]);
-                }
+            var player = new GameObject();
+            var playerStatus = player.AddComponent<PlayerBattleStatus>();
+            playerStatus.CopyFrom(playerCharacter);
 
-                var status = player.AddComponent<PlayerBattleStatus>();
-                status.CopyFrom(partyMember);
-
-                _playerStatuses.Add(status);
-            }
+            _playerStatuses.Add(playerStatus);
 
             _playerStatuses = _playerStatuses.OrderBy(x => x.speed).ToList();
 
@@ -222,10 +206,11 @@ namespace Combat
             }
         }
 
-        private void PlayerAttackEffect(int damage)
+        private void PlayerAttackEffect(double damage)
         {
             var text = Instantiate(damageIndicator, combatUI.transform, true);
-            text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text = damage.ToString();
+            text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text =
+                damage.ToString(CultureInfo.InvariantCulture);
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()

@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using Enemy;
 using SceneHandler;
-using World;
+using Stat_Classes;
+using UnityEngine;
 
 namespace Combat
 {
@@ -21,13 +22,8 @@ namespace Combat
         {
             if (status == EndBattleStatus.Normal)
             {
-                for (var i = 0; i < ProgressionStatus.PartyMembers.Count; i++)
-                {
-                    var partyStatus = ProgressionStatus.PartyMembers[i];
-                    var playerStatus = playerStatuses[i];
-
-                    partyStatus.CopyFrom(playerStatus);
-                }
+                var playerCharacter = Object.FindObjectOfType<Player_Character>();
+                playerCharacter.CopyFrom(playerStatuses[0]);
             }
 
             IsInCombat = false;
