@@ -27,6 +27,16 @@ namespace Stat_Classes
         {
             CalculateStatValue();
         }
+        private void Start()
+        {
+            Vector3 hideSelf = new Vector3(0, 0, 10);
+            gameObject.transform.position = hideSelf;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            GameObject gm = GameObject.FindWithTag("GameManager");
+            gameObject.transform.SetParent(gm.transform);
+            DontDestroyOnLoad(this);
+            CalculateStatValue();
+        }
         public enum StatType
         {
             Defence,

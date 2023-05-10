@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using Enemy;
 using Stat_Classes;
 using TMPro;
@@ -92,6 +93,7 @@ namespace Combat
                     // Added by C-Hurrell
                     enemyContainer.GetComponent<SpriteRenderer>().sprite = enemy.GetComponent<SpriteRenderer>().sprite;
                     enemyContainer.GetComponent<SpriteRenderer>().color = enemy.GetComponent<SpriteRenderer>().color;
+                    enemyContainer.transform.localScale = enemy.transform.localScale;
                     //
                 }
 
@@ -209,8 +211,10 @@ namespace Combat
         private void PlayerAttackEffect(double damage)
         {
             var text = Instantiate(damageIndicator, combatUI.transform, true);
-            text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text =
-                damage.ToString(CultureInfo.InvariantCulture);
+            Vector2 pos = new Vector2(40, 30);
+            text.GetComponent<RectTransform>().anchoredPosition = pos; ;
+            text.GetComponent<TextMeshProUGUI>().text =
+                damage.ToString();
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()

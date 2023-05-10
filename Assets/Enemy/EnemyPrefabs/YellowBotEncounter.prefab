@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: YellowBotEncounter
       objectReference: {fileID: 0}
+    - target: {fileID: 4825558485601878821, guid: cd62f02da94171e48ac9d0300ed83f04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4825558485601878824, guid: cd62f02da94171e48ac9d0300ed83f04, type: 3}
       propertyPath: enemyInfo.enemyType
       value: 1
