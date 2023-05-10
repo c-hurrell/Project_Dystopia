@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using Enemy;
 using TMPro;
@@ -210,11 +209,8 @@ namespace Combat
 
         private void PlayerAttackEffect(int damage)
         {
-            GameObject text = Instantiate(damageIndicator);
-            text.transform.SetParent(combatUI.transform);
+            var text = Instantiate(damageIndicator, combatUI.transform, true);
             text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text = damage.ToString();
-
-            
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
