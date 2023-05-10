@@ -1799,6 +1799,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: combatUI
+      value: 
+      objectReference: {fileID: 634662569}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyContainer
       value: 
       objectReference: {fileID: 112289731}
@@ -1806,6 +1810,10 @@ PrefabInstance:
       propertyPath: enemyHudPrefab
       value: 
       objectReference: {fileID: 6648755514971596290, guid: 4298c7586669cb328a949b0267c182a5, type: 3}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: damageIndicator
+      value: 
+      objectReference: {fileID: 8646089849251186495, guid: c690eae8a9a7e064d9933e61fbaa4c6f, type: 3}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyHudContainer
       value: 

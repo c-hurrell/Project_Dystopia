@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using Enemy;
 using TMPro;
@@ -23,6 +24,9 @@ namespace Combat
         [SerializeField] private GameObject combatHudContainer;
 
         [SerializeField] private GameObject enemyContainer;
+
+        [SerializeField] private GameObject combatUI;
+        [SerializeField] private GameObject damageIndicator;
 
         private TextMeshProUGUI _playerHpText;
         private readonly List<TextMeshProUGUI> _enemyHpTexts = new();
@@ -188,6 +192,12 @@ namespace Combat
             };
 
             playerAction.Execute(_enemyStatuses, _playerStatuses, _playerStatuses[_turnIndex]);
+
+            if (playerAction is AttackAction)
+            {
+                PlayerAttackEffect(_playerStatuses[_turnIndex].attack);
+            }
+
             UpdateHud();
 
             _turnIndex++;
@@ -196,6 +206,15 @@ namespace Combat
             {
                 StartCoroutine(WaitForDeathsAndEnemyTurn());
             }
+        }
+
+        private void PlayerAttackEffect(int damage)
+        {
+            GameObject text = Instantiate(damageIndicator);
+            text.transform.SetParent(combatUI.transform);
+            text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text = damage.ToString();
+
+            
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
