@@ -19,12 +19,15 @@ namespace Combat
 
         public static void EndBattle(EndBattleStatus status, List<PlayerBattleStatus> playerStatuses)
         {
-            for (var i = 0; i < ProgressionStatus.PartyMembers.Count; i++)
+            if (status == EndBattleStatus.Normal)
             {
-                var partyStatus = ProgressionStatus.PartyMembers[i];
-                var playerStatus = playerStatuses[i];
+                for (var i = 0; i < ProgressionStatus.PartyMembers.Count; i++)
+                {
+                    var partyStatus = ProgressionStatus.PartyMembers[i];
+                    var playerStatus = playerStatuses[i];
 
-                partyStatus.CopyFrom(playerStatus);
+                    partyStatus.CopyFrom(playerStatus);
+                }
             }
 
             IsInCombat = false;
