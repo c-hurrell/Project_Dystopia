@@ -1824,7 +1824,7 @@ PrefabInstance:
       objectReference: {fileID: 682393152}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
@@ -1838,6 +1838,10 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 321353380766757959, guid: af323a2fcd2f62749bfb14a755b3da34, type: 3}
+    - target: {fileID: 1476948084647554098, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
+      propertyPath: enemyPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 4244845067598668478, guid: b08826a16347aa848a25960114a6dd37, type: 3}
     - target: {fileID: 1476948084647554099, guid: 4e700a13af04a6b17b6ac79f9aa8cb82, type: 3}
       propertyPath: m_Name
       value: CombatManagerScript
