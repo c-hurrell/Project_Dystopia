@@ -69,6 +69,7 @@ public class Inventory : MonoBehaviour
     public void AddPart(GameObject part)
     {
         TestParts.Add(part);
+        SortPartList();
     }
 
     void RemovePart(int partSlot)

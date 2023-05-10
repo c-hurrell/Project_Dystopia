@@ -5,7 +5,8 @@ namespace Enemy
         Test,
         YellowBot,
         BlueBot,
-        RedBot,
-        PurpleBot
+        Level1Boss,
+        Level2Boss,
+        Level3Boss
     }
 }
