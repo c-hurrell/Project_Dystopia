@@ -25,6 +25,7 @@ namespace Combat
 
         [SerializeField] private GameObject enemyContainer;
 
+        [SerializeField] private GameObject combatUI;
         [SerializeField] private GameObject damageIndicator;
 
         private TextMeshProUGUI _playerHpText;
@@ -209,11 +210,11 @@ namespace Combat
 
         private void PlayerAttackEffect(int damage)
         {
-            Vector3 pos;
-            pos.x = 20;
-            pos.y = 20;
-            GameObject text = Instantiate(damageIndicator, pos);
-            text.GetComponent<TextMeshProUGUI>().text = damage.ToString();
+            GameObject text = Instantiate(damageIndicator);
+            text.transform.SetParent(combatUI.transform);
+            text.transform.Find("DamageIndicator").GetComponent<TextMeshProUGUI>().text = damage.ToString();
+
+            
         }
 
         private IEnumerator WaitForDeathsAndEnemyTurn()
