@@ -15,7 +15,7 @@ public class TimeAttack : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (timeLeft <= 0)
+        if (timeLeft <= 0 && !hasReachedEnd)
         {
             string[] timeRunOut = { "You ran out of time!" };
             DialogManager.ShowDialog(timeRunOut);
