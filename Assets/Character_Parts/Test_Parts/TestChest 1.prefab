@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 4577803343688401493}
   - component: {fileID: 1589402248388540432}
   - component: {fileID: -7871834907478158971}
+  - component: {fileID: 3520462699869683796}
   m_Layer: 0
   m_Name: TestChest 1
   m_TagString: Untagged
@@ -4134,6 +4135,28 @@ MonoBehaviour:
   _statBaseVal: 0
   _partSkill: {fileID: 0}
 --- !u!114 &-7871834907478158971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376430687877762256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f49ddc1707c34a8cba038af673db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 0
+  itemDescription: 
+  sprite: {fileID: 0}
+  _partName: 
+  partType: 0
+  _partLvl: 0
+  _statType: 0
+  _statVal: 0
+  _statBaseVal: 0
+  _partSkill: {fileID: 0}
+--- !u!114 &3520462699869683796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

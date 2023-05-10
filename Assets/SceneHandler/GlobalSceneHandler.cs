@@ -35,11 +35,14 @@ namespace SceneHandler
         {
             // scuffed but this is fine for now
             var loader = SceneEnumToScene(scene);
+            
+            
 
             _loadingScene = SceneManager.LoadSceneAsync(loader.SceneName,
                 loader.Additive ? LoadSceneMode.Additive : LoadSceneMode.Single);
             _loadingScene.allowSceneActivation = false;
             StartCoroutine(LoadSceneBg(loader));
+            
         }
 
         private SceneBase SceneEnumToScene(Scene scene)
