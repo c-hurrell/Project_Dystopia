@@ -1,5 +1,7 @@
 using Enemy;
 using SceneHandler;
+using UnityEditor;
+using UnityEngine;
 
 namespace Combat
 {
@@ -23,6 +25,7 @@ namespace Combat
 
             if (status == EndBattleStatus.GameOver)
             {
+                
                 GlobalSceneHandler.LoadScene(Scene.GameOver);
             }
         }
