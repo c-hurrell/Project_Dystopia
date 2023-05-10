@@ -92,6 +92,7 @@ namespace Combat
                     // Added by C-Hurrell
                     enemyContainer.GetComponent<SpriteRenderer>().sprite = enemy.GetComponent<SpriteRenderer>().sprite;
                     enemyContainer.GetComponent<SpriteRenderer>().color = enemy.GetComponent<SpriteRenderer>().color;
+                    enemyContainer.transform.localScale = enemy.transform.localScale;
                     //
                 }
 
