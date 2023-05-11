@@ -23,6 +23,8 @@ namespace Stat_Classes
             chestUI.GetComponent<Button>().image.sprite = chestPart.sprite;
             armsUI.GetComponent<Button>().image.sprite = armsPart.sprite;
             legsUI.GetComponent<Button>().image.sprite = legsPart.sprite;
+
+            StatTotals();
         }
 
         void UnEquip(Part part)
