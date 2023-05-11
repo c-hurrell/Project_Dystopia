@@ -7,7 +7,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public void OnStartClick()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void Quit()

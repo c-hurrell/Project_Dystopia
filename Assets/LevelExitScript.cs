@@ -7,7 +7,7 @@ public class LevelExitScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private string nextLevel = "Level2";
-    [SerializeField] private BoxCollider2D exitBox;
+    //[SerializeField] private BoxCollider2D exitBox;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
@@ -32,6 +32,10 @@ public class LevelExitScript : MonoBehaviour
             transform1.position = level3Pos;
         }
         else if (nextLevel == "EndScene")
+        {
+            Destroy(GameObject.FindGameObjectWithTag("GameManager"));
+        }
+        else if (nextLevel == "Level1")
         {
             Destroy(GameObject.FindGameObjectWithTag("GameManager"));
         }
