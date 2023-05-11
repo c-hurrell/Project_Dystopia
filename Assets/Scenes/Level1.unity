@@ -7827,7 +7827,15 @@ PrefabInstance:
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: armsPart
       value: 
-      objectReference: {fileID: -4780572825178928425, guid: 1cd27b91d9846374196998375508122b, type: 3}
+      objectReference: {fileID: 5012025810771302365, guid: 395095a94170b354d801e46855346c3b, type: 3}
+    - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
+      propertyPath: headPart
+      value: 
+      objectReference: {fileID: -4780572825178928425, guid: 9ab5b75cd1f39af438e26542b75d9a62, type: 3}
+    - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
+      propertyPath: legsPart
+      value: 
+      objectReference: {fileID: 5012025810771302365, guid: f97ab9212fd62bb4498887c0956d1d5a, type: 3}
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: baseSpeed
       value: 10
@@ -7835,7 +7843,7 @@ PrefabInstance:
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: chestPart
       value: 
-      objectReference: {fileID: 5012025810771302365, guid: ee228a1e7908b204995b3f0d17a658ac, type: 3}
+      objectReference: {fileID: 5012025810771302365, guid: 8f7624e3c39ae73448f57e0f314815d6, type: 3}
     - target: {fileID: 7430171446391951786, guid: e010aae0c36fee61a8fb53d15f3d214a, type: 3}
       propertyPath: currentHp
       value: 50
